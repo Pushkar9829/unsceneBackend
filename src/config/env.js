@@ -1,0 +1,32 @@
+const path = require("path");
+const dotenv = require("dotenv");
+
+// Prefer backend/src/.env (current project layout), fallback to backend/.env
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
+dotenv.config();
+
+const env = {
+  port: process.env.PORT || 5000,
+  mongoUri: process.env.MONGO_URI || "mongodb://127.0.0.1:27017/unscene_ai",
+  jwtSecret: process.env.JWT_SECRET || "unsceneai-dev-secret",
+  /** Short-lived access JWT (Bearer on API calls). */
+  jwtAccessExpiresIn:
+    process.env.JWT_ACCESS_EXPIRES_IN || process.env.JWT_EXPIRES_IN || "15m",
+  /** Long-lived refresh JWT (session extension; rotated on /auth/refresh). */
+  jwtRefreshExpiresIn: process.env.JWT_REFRESH_EXPIRES_IN || "30d",
+  awsRegion: process.env.AWS_REGION || "",
+  awsS3Bucket: process.env.AWS_S3_BUCKET || "",
+  awsAccessKeyId: process.env.AWS_ACCESS_KEY_ID || "",
+  awsSecretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || "",
+  awsCloudFrontDomain: process.env.AWS_CLOUDFRONT_DOMAIN || "",
+  adminName: process.env.DEFAULT_ADMIN_NAME || "Super Admin",
+  adminEmail: process.env.DEFAULT_ADMIN_EMAIL || "admin@unscene.ai",
+  adminPassword: process.env.DEFAULT_ADMIN_PASSWORD || "Admin@123",
+  /** Comma-separated extra browser origins for CORS (e.g. https://admin.example.com). */
+  corsExtraOrigins: (process.env.CORS_ORIGINS || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean),
+};
+
+module.exports = env;
