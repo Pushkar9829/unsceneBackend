@@ -5,6 +5,8 @@ const {
   addSeriesToFavorites,
   removeSeriesFromFavorites,
   listFavoriteSeries,
+  sendDeleteAccountOtp,
+  deleteUserAccount,
 } = require("./user.service");
 const { successResponse, errorResponse } = require("../../common/utils/response");
 
@@ -71,6 +73,25 @@ const presignProfileImage = async (req, res) => {
   }
 };
 
+const postDeleteAccountSendOtp = async (req, res) => {
+  try {
+    await sendDeleteAccountOtp(req.user.id);
+    return successResponse(res, null, "OTP sent successfully.");
+  } catch (error) {
+    const status = error.message === "Failed to send OTP" ? 500 : statusFromError(error, 400);
+    return errorResponse(res, error.message, status);
+  }
+};
+
+const deleteMe = async (req, res) => {
+  try {
+    const data = await deleteUserAccount(req.user.id, req.body);
+    return successResponse(res, data, "Account deleted");
+  } catch (error) {
+    return errorResponse(res, error.message, statusFromError(error, 400));
+  }
+};
+
 module.exports = {
   getMe,
   patchMe,
@@ -78,4 +99,6 @@ module.exports = {
   getFavoriteSeries,
   postFavoriteSeries,
   deleteFavoriteSeries,
+  postDeleteAccountSendOtp,
+  deleteMe,
 };

@@ -1,10 +1,23 @@
 const {
+  sendUserOtp,
   verifyUserOtpAndAuth,
   loginAdmin,
   refreshSession,
   logoutWithAccessToken,
 } = require("./auth.service");
 const { successResponse, errorResponse } = require("../../common/utils/response");
+
+const userSendOtp = async (req, res) => {
+  try {
+    console.log("[AUTH][USER] send-otp request", { phone: req.body?.phone });
+    await sendUserOtp(req.body);
+    return successResponse(res, null, "OTP sent successfully.");
+  } catch (error) {
+    console.log("[AUTH][USER] send-otp failed", { error: error.message });
+    const status = error.message === "Failed to send OTP" ? 500 : 400;
+    return errorResponse(res, error.message, status);
+  }
+};
 
 const userVerifyOtp = async (req, res) => {
   try {
@@ -54,6 +67,7 @@ const logout = async (req, res) => {
 };
 
 module.exports = {
+  userSendOtp,
   userVerifyOtp,
   adminLogin,
   refreshTokens,

@@ -9,6 +9,8 @@ const findSeriesById = (id) => Series.findById(id);
 const findSeriesByUser = (userId) =>
   Series.find({ user: userId }).sort({ updatedAt: -1 }).select("-__v").lean();
 
+const deleteAllSeriesByUser = (userId) => Series.deleteMany({ user: userId });
+
 const findSeriesCatalog = ({ q, status, genreId, skip, limit }) => {
   const filter = {};
   if (status) {
@@ -112,6 +114,7 @@ module.exports = {
   createSeries,
   findSeriesById,
   findSeriesByUser,
+  deleteAllSeriesByUser,
   findSeriesCatalog,
   adminListSeries,
   aggregateSeriesStatusCounts,

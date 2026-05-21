@@ -1,4 +1,6 @@
-const { USER_OTP, ROLES } = require("../../config/constants");
+const { ROLES } = require("../../config/constants");
+const otpService = require("../../common/services/otpService");
+const { normalizePhoneForDb, isValidIndianMobile } = require("../../common/utils/phone");
 const {
   signAccessToken,
   signRefreshToken,
@@ -55,22 +57,40 @@ const issueAdminTokenPair = (admin) => {
   };
 };
 
+const sendUserOtp = async ({ phone }) => {
+  if (!phone) {
+    throw new Error("phone is required");
+  }
+  if (!isValidIndianMobile(phone)) {
+    throw new Error("Enter a valid 10-digit mobile number");
+  }
+  await otpService.createAndSendOtp(phone);
+};
+
 const verifyUserOtpAndAuth = async ({ phone, otp, name }) => {
-  console.log("[AUTH][USER] service start", { phone });
+  const phoneDb = normalizePhoneForDb(phone);
+  console.log("[AUTH][USER] service start", { phone: phoneDb });
   if (!phone || !otp) {
     throw new Error("phone and otp are required");
   }
-
-  if (otp !== USER_OTP) {
-    throw new Error("Invalid OTP");
+  if (!isValidIndianMobile(phone)) {
+    throw new Error("Enter a valid 10-digit mobile number");
   }
 
-  let user = await findUserByPhone(phone);
+  const otpStr = String(otp).trim();
+  if (!otpStr) {
+    throw new Error("Invalid or expired OTP");
+  }
+  if (!otpService.verifyOtp(phone, otpStr)) {
+    throw new Error("Invalid or expired OTP");
+  }
+
+  let user = await findUserByPhone(phoneDb);
   let isNewUser = false;
 
   if (!user) {
-    console.log("[AUTH][USER] creating new user", { phone, hasName: Boolean(name) });
-    user = await createUser({ name, phone });
+    console.log("[AUTH][USER] creating new user", { phone: phoneDb, hasName: Boolean(name) });
+    user = await createUser({ name, phone: phoneDb });
     isNewUser = true;
   } else {
     console.log("[AUTH][USER] existing user login", { userId: user._id });
@@ -179,6 +199,7 @@ const logoutWithAccessToken = async (accessPayload) => {
 };
 
 module.exports = {
+  sendUserOtp,
   verifyUserOtpAndAuth,
   loginAdmin,
   refreshSession,

@@ -27,6 +27,18 @@ const env = {
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean),
+  msg91AuthKey: process.env.MSG91_AUTH_KEY || "",
+  msg91FlowId: process.env.MSG91_FLOW_ID || "",
+  msg91SenderId: process.env.MSG91_SENDER_ID || "",
+  /** Msg91 flow template variable name (e.g. var, VAR1). If unset, common keys are sent. */
+  msg91OtpVarName: process.env.MSG91_OTP_VAR_NAME || "",
+  /**
+   * Play Store / QA test login — 10-digit Indian mobile (no +91).
+   * Set DEMO_OTP_ENABLED=false in production when review is complete.
+   */
+  demoOtpEnabled: process.env.DEMO_OTP_ENABLED !== "false",
+  demoPhone: process.env.DEMO_PHONE || "9999999999",
+  demoOtp: process.env.DEMO_OTP || "123456",
 };
 
 module.exports = env;

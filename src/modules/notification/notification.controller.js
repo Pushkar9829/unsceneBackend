@@ -1,5 +1,11 @@
 const { successResponse, errorResponse } = require("../../common/utils/response");
-const { listNotifications, getUnreadCount } = require("./notification.service");
+const {
+  listNotifications,
+  getUnreadCount,
+  markNotificationRead,
+  markAllNotificationsRead,
+  adminSendNotification,
+} = require("./notification.service");
 
 const statusFromError = (error, fallback) =>
   Number.isFinite(Number(error?.statusCode)) ? Number(error.statusCode) : fallback;
@@ -22,8 +28,37 @@ const unreadCount = async (req, res) => {
   }
 };
 
+const markRead = async (req, res) => {
+  try {
+    const data = await markNotificationRead(req.user.id, req.params.notificationId);
+    return successResponse(res, data, "Notification marked as read");
+  } catch (error) {
+    return errorResponse(res, error.message, statusFromError(error, 400));
+  }
+};
+
+const markAllRead = async (req, res) => {
+  try {
+    const data = await markAllNotificationsRead(req.user.id);
+    return successResponse(res, data, "All notifications marked as read");
+  } catch (error) {
+    return errorResponse(res, error.message, statusFromError(error, 400));
+  }
+};
+
+const adminSend = async (req, res) => {
+  try {
+    const data = await adminSendNotification(req.user.id, req.body);
+    return successResponse(res, data, "Notification sent", 201);
+  } catch (error) {
+    return errorResponse(res, error.message, statusFromError(error, 400));
+  }
+};
+
 module.exports = {
   list,
   unreadCount,
+  markRead,
+  markAllRead,
+  adminSend,
 };
-

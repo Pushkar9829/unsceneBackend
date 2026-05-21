@@ -11,6 +11,7 @@ const seriesRoutes = require("./modules/series/series.routes");
 const seriesCatalogRoutes = require("./modules/series/series.catalog.routes");
 const { publicRouter: genrePublicRoutes, adminRouter: genreAdminRoutes } = require("./modules/genre/genre.routes");
 const notificationRoutes = require("./modules/notification/notification.routes");
+const notificationAdminRoutes = require("./modules/notification/notification.admin.routes");
 const { notFoundHandler, globalErrorHandler } = require("./common/middleware/error.middleware");
 
 const app = express();
@@ -38,6 +39,7 @@ app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/user/watch-progress", watchProgressRoutes);
 app.use("/api/v1/user/series", seriesRoutes);
 app.use("/api/v1/admin", adminRoutes);
+app.use("/api/v1/admin/notifications", notificationAdminRoutes);
 app.use("/api/v1/admin/genres", genreAdminRoutes);
 app.use("/api/v1/analytics", analyticsRoutes);
 // Some client code is calling `/api/notification/...` (no v1 prefix).

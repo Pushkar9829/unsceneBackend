@@ -28,6 +28,8 @@ const removeFavoriteSeriesId = (userId, seriesObjectId) =>
     { new: true, runValidators: true }
   ).select("-__v");
 
+const deleteUserById = (id) => User.findByIdAndDelete(id);
+
 const countUsers = (filter = {}) => User.countDocuments(filter);
 
 const adminListUsers = ({ filter, sortObj, skip, limit }) =>
@@ -45,6 +47,7 @@ module.exports = {
   findFavoriteSeriesIds,
   addFavoriteSeriesId,
   removeFavoriteSeriesId,
+  deleteUserById,
   countUsers,
   adminListUsers,
 };

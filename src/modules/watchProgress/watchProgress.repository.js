@@ -17,9 +17,20 @@ const listByUser = (userId, { skip = 0, limit = 50 }) =>
 
 const deleteByUserAndSeries = (userId, seriesId) => WatchProgress.deleteOne({ userId, seriesId });
 
+const deleteAllByUser = (userId) => WatchProgress.deleteMany({ userId });
+
+const deleteAllBySeriesIds = (seriesIds) => {
+  if (!seriesIds?.length) {
+    return Promise.resolve({ deletedCount: 0 });
+  }
+  return WatchProgress.deleteMany({ seriesId: { $in: seriesIds } });
+};
+
 module.exports = {
   upsertByUserSeries,
   findByUserAndSeries,
   listByUser,
   deleteByUserAndSeries,
+  deleteAllByUser,
+  deleteAllBySeriesIds,
 };

@@ -1,13 +1,25 @@
 const path = require("path");
 const mongoose = require("mongoose");
-const { findUserById, updateUserById, findFavoriteSeriesIds, addFavoriteSeriesId, removeFavoriteSeriesId } = require("./user.repository");
+const {
+  findUserById,
+  updateUserById,
+  findFavoriteSeriesIds,
+  addFavoriteSeriesId,
+  removeFavoriteSeriesId,
+  deleteUserById,
+} = require("./user.repository");
 const {
   getPresignedUploadUrl,
   getPublicFileUrl,
+  deleteObjectByKey,
 } = require("../../common/services/s3.service");
-const { findSeriesById } = require("../series/series.repository");
+const { findSeriesById, findSeriesByUser, deleteAllSeriesByUser } = require("../series/series.repository");
 const Series = require("../series/series.model");
 const { recordAnalyticsEvent } = require("../analytics/analytics.service");
+const otpService = require("../../common/services/otpService");
+const { deleteAllByUser: deleteWatchProgressByUser, deleteAllBySeriesIds: deleteWatchProgressBySeriesIds } = require("../watchProgress/watchProgress.repository");
+const { deleteAllByUser: deleteNotificationsByUser } = require("../notification/notification.repository");
+const AnalyticsEvent = require("../analytics/analyticsEvent.model");
 
 const httpError = (statusCode, message) => {
   const err = new Error(message);
@@ -194,6 +206,94 @@ const listFavoriteSeries = async (userId, query = {}) => {
   };
 };
 
+const collectS3KeysFromSeries = (series) => {
+  const keys = new Set();
+  const add = (key) => {
+    if (typeof key === "string" && key.trim()) {
+      keys.add(key.trim());
+    }
+  };
+  add(series.thumbnailKey);
+  for (const ep of series.episodes || []) {
+    add(ep.videoKey);
+    add(ep.timestampJsonKey);
+    for (const cue of ep.productCues || []) {
+      add(cue.imageKey);
+    }
+  }
+  for (const product of series.products || []) {
+    add(product.imageKey);
+  }
+  return [...keys];
+};
+
+const deleteS3KeysBestEffort = async (keys) => {
+  const unique = [...new Set(keys.filter(Boolean))];
+  for (const key of unique) {
+    try {
+      await deleteObjectByKey(key);
+    } catch (err) {
+      console.warn("[USER][DELETE_ACCOUNT] S3 delete failed", { key, error: err.message });
+    }
+  }
+};
+
+const sendDeleteAccountOtp = async (userId) => {
+  const user = await findUserById(userId);
+  if (!user) {
+    throw httpError(404, "User not found");
+  }
+  if (!user.isActive) {
+    throw httpError(400, "Account is not active");
+  }
+  await otpService.createAndSendOtp(user.phone);
+};
+
+const deleteUserAccount = async (userId, { otp } = {}) => {
+  const otpStr = String(otp || "").trim();
+  if (!otpStr) {
+    throw httpError(400, "Invalid or expired OTP");
+  }
+
+  const user = await findUserById(userId);
+  if (!user) {
+    throw httpError(404, "User not found");
+  }
+  if (!user.isActive) {
+    throw httpError(400, "Account is not active");
+  }
+  if (!otpService.verifyOtp(user.phone, otpStr)) {
+    throw httpError(400, "Invalid or expired OTP");
+  }
+
+  const seriesList = await findSeriesByUser(userId);
+  const seriesIds = seriesList.map((s) => s._id);
+
+  const s3Keys = [];
+  if (user.profileImageKey) {
+    s3Keys.push(user.profileImageKey);
+  }
+  for (const series of seriesList) {
+    s3Keys.push(...collectS3KeysFromSeries(series));
+  }
+  await deleteS3KeysBestEffort(s3Keys);
+
+  await Promise.all([
+    deleteWatchProgressByUser(userId),
+    deleteWatchProgressBySeriesIds(seriesIds),
+    deleteNotificationsByUser(userId),
+    AnalyticsEvent.deleteMany({ userId }),
+    deleteAllSeriesByUser(userId),
+  ]);
+
+  const deleted = await deleteUserById(userId);
+  if (!deleted) {
+    throw httpError(404, "User not found");
+  }
+
+  return { deleted: true };
+};
+
 module.exports = {
   getUserProfile,
   updateUserProfile,
@@ -201,4 +301,6 @@ module.exports = {
   addSeriesToFavorites,
   removeSeriesFromFavorites,
   listFavoriteSeries,
+  sendDeleteAccountOtp,
+  deleteUserAccount,
 };

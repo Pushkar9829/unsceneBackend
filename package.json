@@ -10,6 +10,7 @@
     "seed:genres": "node src/scripts/seedGenres.js",
     "seed:product-cues": "node src/scripts/seedEpisodeProductCues.js",
     "seed:vto-demo": "node src/scripts/seedVtoDemo.js",
+    "seed:demo-episodes": "node src/scripts/seedDemoUserEpisodes.js",
     "test": "echo \"No tests configured\""
   },
   "keywords": [],
