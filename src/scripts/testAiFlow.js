@@ -15,6 +15,8 @@ const path = require("path");
 const API_BASE_URL = (process.env.API_BASE_URL || "http://localhost:5000").replace(/\/+$/, "");
 const SIMULATE_CALLBACK = process.env.SIMULATE_CALLBACK !== "false";
 const SKIP_AI_TRIGGER = process.env.SKIP_AI_TRIGGER === "true";
+const DEFAULT_TEST_PHONE = process.env.TEST_PHONE || "9999999999";
+const DEFAULT_TEST_OTP = process.env.TEST_OTP || "123456";
 
 const isLikelyJwt = (token) =>
   typeof token === "string" &&
@@ -119,8 +121,8 @@ const login = async () => {
     return process.env.ACCESS_TOKEN;
   }
 
-  const phone = process.env.TEST_PHONE;
-  const otp = process.env.TEST_OTP;
+  const phone = process.env.TEST_PHONE || DEFAULT_TEST_PHONE;
+  const otp = process.env.TEST_OTP || DEFAULT_TEST_OTP;
   if (!phone || !otp) {
     throw new Error("Set ACCESS_TOKEN or both TEST_PHONE and TEST_OTP");
   }
