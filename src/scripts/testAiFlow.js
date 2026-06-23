@@ -126,10 +126,33 @@ const login = async () => {
   }
 
   await api("POST", "/api/v1/auth/user/send-otp", { json: { phone } });
-  const verified = await api("POST", "/api/v1/auth/user/verify-otp", { json: { phone, otp } });
+
+  const url = `${API_BASE_URL}/api/v1/auth/user/verify-otp`;
+  const verifyRes = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ phone, otp }),
+  });
+  const verifyText = await verifyRes.text();
+  let verified;
+  try {
+    verified = verifyText ? JSON.parse(verifyText) : {};
+  } catch {
+    verified = { raw: verifyText };
+  }
+  logBlock(`POST RESPONSE ${verifyRes.status}`, verified);
+
+  if (!verifyRes.ok || !verified?.success) {
+    throw new Error(
+      verified?.message ||
+        "OTP verify failed — use the 6-digit code from SMS (not YOUR_SMS_CODE). " +
+          "Verify within a few minutes and do not pm2 restart between send-otp and verify."
+    );
+  }
+
   const token = verified?.data?.token;
   if (!token) {
-    throw new Error("Login succeeded but no token in response");
+    throw new Error("OTP verify succeeded but no token in response");
   }
   return token;
 };
