@@ -16,6 +16,21 @@ const API_BASE_URL = (process.env.API_BASE_URL || "http://localhost:5000").repla
 const SIMULATE_CALLBACK = process.env.SIMULATE_CALLBACK !== "false";
 const SKIP_AI_TRIGGER = process.env.SKIP_AI_TRIGGER === "true";
 
+const isLikelyJwt = (token) =>
+  typeof token === "string" &&
+  token.length > 20 &&
+  !/paste|your|token|here|\.\.\./i.test(token) &&
+  token.split(".").length === 3;
+
+const assertAccessToken = (token) => {
+  if (!isLikelyJwt(token)) {
+    throw new Error(
+      "Invalid ACCESS_TOKEN. Use a real JWT from verify-otp (starts with eyJ..., three dot-separated parts). " +
+        "Example: ACCESS_TOKEN=$(curl -s ... verify-otp ... | jq -r '.data.token')"
+    );
+  }
+};
+
 const DEFAULT_VIDEO_URL =
   "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/episodes/1778443081381-6e8cbb62-f03c-4cea-88c6-8ef8cb9f8c5c-vtoVideo.mp4";
 const DEFAULT_PRODUCT_URL =
@@ -99,6 +114,7 @@ const api = async (method, route, { token, json, formData } = {}) => {
 
 const login = async () => {
   if (process.env.ACCESS_TOKEN) {
+    assertAccessToken(process.env.ACCESS_TOKEN);
     logBlock("AUTH", "Using ACCESS_TOKEN from env");
     return process.env.ACCESS_TOKEN;
   }
