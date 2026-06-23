@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 # Run full AI upload + analyze + callback test from EC2 Linux.
 #
-# Usage (on EC2, from backend repo root):
-#   chmod +x scripts/test-ai-flow.sh
-#   ./scripts/test-ai-flow.sh
+# Preferred (no chmod needed):
+#   bash scripts/test-ai-flow.sh
+#
+# Or run Node directly:
+#   API_BASE_URL=https://api.unscene.in ACCESS_TOKEN=<jwt> node src/scripts/testAiFlow.js
 #
 # With real OTP login:
-#   API_BASE_URL=http://localhost:5000 TEST_PHONE=9876543210 TEST_OTP=123456 ./scripts/test-ai-flow.sh
+#   API_BASE_URL=https://api.unscene.in TEST_PHONE=9876543210 TEST_OTP=123456 bash scripts/test-ai-flow.sh
 #
-# With existing JWT (skip OTP):
-#   API_BASE_URL=https://api.unscene.in ACCESS_TOKEN=eyJ... ./scripts/test-ai-flow.sh
+# Local API on same EC2:
+#   API_BASE_URL=http://127.0.0.1:5000 bash scripts/test-ai-flow.sh
 #
 # Use local files instead of downloading:
 #   VIDEO_PATH=/path/to/episode.mp4 PRODUCT_IMAGE_PATH=/path/to/product.jpg ./scripts/test-ai-flow.sh

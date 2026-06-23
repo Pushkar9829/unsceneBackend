@@ -3,11 +3,10 @@
  * End-to-end AI flow test: login → create series → upload episode + product → trigger AI → callback.
  *
  * Run on EC2 (from backend repo root):
- *   chmod +x scripts/test-ai-flow.sh
- *   ./scripts/test-ai-flow.sh
+ *   bash scripts/test-ai-flow.sh
  *
- * Or directly:
- *   API_BASE_URL=http://localhost:5000 TEST_PHONE=9876543210 TEST_OTP=123456 node src/scripts/testAiFlow.js
+ * Or directly (no chmod):
+ *   API_BASE_URL=https://api.unscene.in ACCESS_TOKEN=<jwt> node src/scripts/testAiFlow.js
  */
 const fs = require("fs");
 const os = require("os");
