@@ -316,6 +316,9 @@ const postAnalyzeJob = async (payload) => {
  */
 const queueSeriesAiAnalysis = async (seriesId) => {
   if (!isIngestConfigured()) {
+    console.warn(
+      "[ai-ingest] SKIPPED — set AI_SERVICE_URL in src/.env then: pm2 restart all --update-env"
+    );
     await markAiStatus(seriesId, { aiProcessingStatus: AI_PROCESSING_STATUS.SKIPPED });
     return { skipped: true, reason: "AI ingest not configured" };
   }

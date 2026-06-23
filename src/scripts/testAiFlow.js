@@ -15,8 +15,18 @@ const path = require("path");
 const API_BASE_URL = (process.env.API_BASE_URL || "http://localhost:5000").replace(/\/+$/, "");
 const SIMULATE_CALLBACK = process.env.SIMULATE_CALLBACK !== "false";
 const SKIP_AI_TRIGGER = process.env.SKIP_AI_TRIGGER === "true";
-const DEFAULT_TEST_PHONE = process.env.TEST_PHONE || "9999999999";
-const DEFAULT_TEST_OTP = process.env.TEST_OTP || "123456";
+const AI_WAIT_TIMEOUT_MS = Number(process.env.AI_WAIT_TIMEOUT_MS) || 120000;
+const AI_POLL_INTERVAL_MS = Number(process.env.AI_POLL_INTERVAL_MS) || 3000;
+const DEMO_PHONE = "9999999999";
+const DEMO_OTP = "123456";
+
+const resolveAccessToken = () => {
+  const raw = process.env.ACCESS_TOKEN;
+  if (raw == null || raw === "" || raw === "null" || raw === "undefined") {
+    return "";
+  }
+  return String(raw).trim();
+};
 
 const isLikelyJwt = (token) =>
   typeof token === "string" &&
@@ -115,17 +125,16 @@ const api = async (method, route, { token, json, formData } = {}) => {
 };
 
 const login = async () => {
-  if (process.env.ACCESS_TOKEN) {
-    assertAccessToken(process.env.ACCESS_TOKEN);
+  const accessToken = resolveAccessToken();
+  if (accessToken) {
+    assertAccessToken(accessToken);
     logBlock("AUTH", "Using ACCESS_TOKEN from env");
-    return process.env.ACCESS_TOKEN;
+    return accessToken;
   }
 
-  const phone = process.env.TEST_PHONE || DEFAULT_TEST_PHONE;
-  const otp = process.env.TEST_OTP || DEFAULT_TEST_OTP;
-  if (!phone || !otp) {
-    throw new Error("Set ACCESS_TOKEN or both TEST_PHONE and TEST_OTP");
-  }
+  const phone = process.env.TEST_PHONE || DEMO_PHONE;
+  const otp = process.env.TEST_OTP || DEMO_OTP;
+  logBlock("AUTH", { phone, otp: "******", note: "demo login (9999999999 / 123456)" });
 
   await api("POST", "/api/v1/auth/user/send-otp", { json: { phone } });
 
@@ -171,6 +180,59 @@ const uploadMultipart = async (token, seriesId, route, filePath, fields) => {
   return api("POST", `/api/v1/user/series/${seriesId}${route}`, { token, formData: form });
 };
 
+/** Presign → PUT to S3 → register (bypasses nginx body-size limit). */
+const uploadViaPresign = async (token, seriesId, assetType, filePath, registerBody) => {
+  const fileName = path.basename(filePath);
+  const contentType = guessMime(filePath);
+  const presign = await api("POST", `/api/v1/user/series/${seriesId}/upload/presign`, {
+    token,
+    json: { assetType, fileName, contentType },
+  });
+
+  const uploadUrl = presign?.data?.uploadUrl;
+  const key = presign?.data?.key;
+  if (!uploadUrl || !key) {
+    throw new Error("Presign response missing uploadUrl or key");
+  }
+
+  const buf = fs.readFileSync(filePath);
+  logBlock("S3 PUT REQUEST", { uploadUrl: uploadUrl.slice(0, 80) + "...", bytes: buf.length, contentType });
+
+  const putRes = await fetch(uploadUrl, {
+    method: "PUT",
+    headers: { "Content-Type": contentType },
+    body: buf,
+  });
+  const putText = await putRes.text();
+  logBlock(`S3 PUT RESPONSE ${putRes.status}`, putText || "(empty)");
+
+  if (!putRes.ok) {
+    throw new Error(`S3 PUT failed HTTP ${putRes.status}`);
+  }
+
+  const registerRoute = assetType === "episode" ? "/episodes" : "/products";
+  const body =
+    assetType === "episode"
+      ? { videoKey: key, ...registerBody }
+      : { imageKey: key, ...registerBody };
+
+  return api("POST", `/api/v1/user/series/${seriesId}${registerRoute}`, { token, json: body });
+};
+
+const uploadEpisode = async (token, seriesId, filePath, fields) => {
+  if (process.env.USE_MULTIPART_UPLOAD === "true") {
+    return uploadMultipart(token, seriesId, "/episodes/upload", filePath, fields);
+  }
+  return uploadViaPresign(token, seriesId, "episode", filePath, fields);
+};
+
+const uploadProduct = async (token, seriesId, filePath, fields) => {
+  if (process.env.USE_MULTIPART_UPLOAD === "true") {
+    return uploadMultipart(token, seriesId, "/products/upload", filePath, fields);
+  }
+  return uploadViaPresign(token, seriesId, "product", filePath, fields);
+};
+
 const buildSampleCallback = (series, jobId) => {
   const episode = (series.episodes || [])[0];
   if (!episode) {
@@ -206,6 +268,7 @@ const run = async () => {
     SKIP_AI_TRIGGER,
     VIDEO_PATH: process.env.VIDEO_PATH || "(download)",
     PRODUCT_IMAGE_PATH: process.env.PRODUCT_IMAGE_PATH || "(download)",
+    auth: resolveAccessToken() ? "ACCESS_TOKEN" : `demo ${DEMO_PHONE}`,
   });
 
   await api("GET", "/health");
@@ -234,12 +297,12 @@ const run = async () => {
   }
   logBlock("SERIES CREATED", { seriesId });
 
-  const afterEpisode = await uploadMultipart(token, seriesId, "/episodes/upload", videoPath, {
+  const afterEpisode = await uploadEpisode(token, seriesId, videoPath, {
     title: "AI Flow Test Episode",
     order: 1,
   });
 
-  const afterProduct = await uploadMultipart(token, seriesId, "/products/upload", productPath, {
+  const afterProduct = await uploadProduct(token, seriesId, productPath, {
     purchaseLink: "https://example.com/product",
     category: "clothing",
   });
