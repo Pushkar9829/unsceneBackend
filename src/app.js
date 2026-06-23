@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const env = require("./config/env");
 const authRoutes = require("./modules/auth/auth.routes");
 const userRoutes = require("./modules/user/user.routes");
 const watchProgressRoutes = require("./modules/watchProgress/watchProgress.routes");
@@ -12,6 +13,7 @@ const seriesCatalogRoutes = require("./modules/series/series.catalog.routes");
 const { publicRouter: genrePublicRoutes, adminRouter: genreAdminRoutes } = require("./modules/genre/genre.routes");
 const notificationRoutes = require("./modules/notification/notification.routes");
 const notificationAdminRoutes = require("./modules/notification/notification.admin.routes");
+const aiInternalRoutes = require("./modules/ai/ai.routes");
 const { notFoundHandler, globalErrorHandler } = require("./common/middleware/error.middleware");
 
 const app = express();
@@ -26,7 +28,7 @@ app.use(cors(corsOptions));
 app.options(/.*/, cors(corsOptions));
 app.use(helmet());
 app.use(express.json());
-app.use(morgan("dev"));
+app.use(morgan(env.isProduction ? "combined" : "dev"));
 
 app.get("/health", (req, res) => {
   return res.json({ success: true, message: "Backend is running" });
@@ -42,6 +44,7 @@ app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/admin/notifications", notificationAdminRoutes);
 app.use("/api/v1/admin/genres", genreAdminRoutes);
 app.use("/api/v1/analytics", analyticsRoutes);
+app.use("/api/v1/internal/ai", aiInternalRoutes);
 // Some client code is calling `/api/notification/...` (no v1 prefix).
 // Mount both to avoid 404s while the frontend is still being aligned.
 app.use("/api/v1/notification", notificationRoutes);

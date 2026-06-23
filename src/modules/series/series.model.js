@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { SERIES_TYPES } = require("../../config/constants");
+const { SERIES_TYPES, AI_PROCESSING_STATUS } = require("../../config/constants");
 
 /**
  * Shoppable cue: shown in the video player when playback reaches timestampSeconds.
@@ -20,6 +20,23 @@ const episodeProductCueSchema = new mongoose.Schema(
     seriesProductId: { type: mongoose.Schema.Types.ObjectId, default: undefined },
     /** How long this cue stays visible (seconds). Omit for app default (1s slot). */
     displayDurationSeconds: { type: Number, min: 0.1, max: 600, default: undefined },
+    /** End of visibility window (seconds). When set, player shows overlay until this time. */
+    endTimestampSeconds: { type: Number, min: 0, default: undefined },
+    /** Pixel bbox on source video frame [x1, y1, x2, y2] for on-frame overlays. */
+    bbox: {
+      type: [Number],
+      default: undefined,
+      validate: {
+        validator(v) {
+          return v == null || (Array.isArray(v) && v.length === 4 && v.every((n) => Number.isFinite(n)));
+        },
+        message: "bbox must be [x1, y1, x2, y2]",
+      },
+    },
+    /** AI detection label (e.g. trousers, dress). */
+    detectionCategory: { type: String, trim: true, default: "" },
+    /** AI detection group: clothing | object. */
+    detectionType: { type: String, enum: ["clothing", "object"], default: undefined },
   },
   { _id: false }
 );
@@ -102,6 +119,17 @@ const seriesSchema = new mongoose.Schema(
     featured: { type: Boolean, default: false, index: true },
     /** When true, series stays submitted but is omitted from public catalogue & favorites resolution. */
     catalogHidden: { type: Boolean, default: false, index: true },
+    /** Product-cue AI ingest lifecycle (see backend/docs/AI_INGEST_BACKEND.md). */
+    aiProcessingStatus: {
+      type: String,
+      enum: Object.values(AI_PROCESSING_STATUS),
+      default: AI_PROCESSING_STATUS.IDLE,
+      index: true,
+    },
+    aiJobId: { type: String, trim: true, default: "" },
+    aiError: { type: String, trim: true, default: "" },
+    aiRequestedAt: { type: Date },
+    aiCompletedAt: { type: Date },
   },
   { timestamps: true }
 );

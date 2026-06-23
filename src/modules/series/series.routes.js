@@ -15,6 +15,7 @@ const {
   uploadEpisodeMultipart,
   uploadProductMultipart,
   uploadThumbnailMultipart,
+  requestAiAnalyze,
 } = require("./series.controller");
 
 const router = express.Router();
@@ -27,6 +28,7 @@ router.get("/", listSeries);
 router.get("/:seriesId/stats/summary", getCreatorSeriesStats);
 router.get("/:seriesId", getSeries);
 router.patch("/:seriesId", patchSeries);
+router.post("/:seriesId/ai/analyze", requestAiAnalyze);
 router.post("/:seriesId/upload/presign", presignUpload);
 router.post("/:seriesId/episodes", addEpisode);
 router.patch("/:seriesId/episodes/:episodeId", patchEpisode);

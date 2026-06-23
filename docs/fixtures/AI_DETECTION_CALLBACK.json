@@ -1,0 +1,63 @@
+{
+  "jobId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "seriesId": "69fe36c51f3977b48b2e7782",
+  "status": "completed",
+  "episodes": [
+    {
+      "episodeId": "69fe36c91f3977b48b2e7783",
+      "clothing": [
+        {
+          "category": "trousers",
+          "ranges": [
+            { "start": 11, "end": 12, "bbox": [346, 864, 700, 1444] },
+            { "start": 12, "end": 13, "bbox": [349, 857, 715, 1455] },
+            { "start": 13, "end": 14, "bbox": [320, 816, 691, 1429] },
+            { "start": 14, "end": 15, "bbox": [323, 786, 704, 1412] }
+          ]
+        },
+        {
+          "category": "dress",
+          "ranges": [
+            { "start": 13, "end": 14, "bbox": [650, 1498, 727, 1689] },
+            { "start": 13, "end": 14, "bbox": [443, 1484, 545, 1678] },
+            { "start": 13, "end": 14, "bbox": [72, 1466, 148, 1651] },
+            { "start": 14, "end": 15, "bbox": [449, 1467, 553, 1666] },
+            { "start": 14, "end": 15, "bbox": [660, 1486, 745, 1678] },
+            { "start": 16, "end": 17, "bbox": [335, 594, 727, 1389] },
+            { "start": 17, "end": 18, "bbox": [315, 544, 735, 1394] },
+            { "start": 18, "end": 19, "bbox": [323, 547, 748, 1409] }
+          ]
+        }
+      ],
+      "objects": []
+    },
+    {
+      "episodeId": "69fe36cd1f3977b48b2e7787",
+      "clothing": [
+        {
+          "category": "trousers",
+          "ranges": [
+            { "start": 11, "end": 12, "bbox": [346, 864, 700, 1444] },
+            { "start": 12, "end": 13, "bbox": [349, 857, 715, 1455] },
+            { "start": 13, "end": 14, "bbox": [320, 816, 691, 1429] },
+            { "start": 14, "end": 15, "bbox": [323, 786, 704, 1412] }
+          ]
+        },
+        {
+          "category": "dress",
+          "ranges": [
+            { "start": 13, "end": 14, "bbox": [650, 1498, 727, 1689] },
+            { "start": 13, "end": 14, "bbox": [443, 1484, 545, 1678] },
+            { "start": 13, "end": 14, "bbox": [72, 1466, 148, 1651] },
+            { "start": 14, "end": 15, "bbox": [449, 1467, 553, 1666] },
+            { "start": 14, "end": 15, "bbox": [660, 1486, 745, 1678] },
+            { "start": 16, "end": 17, "bbox": [335, 594, 727, 1389] },
+            { "start": 17, "end": 18, "bbox": [315, 544, 735, 1394] },
+            { "start": 18, "end": 19, "bbox": [323, 547, 748, 1409] }
+          ]
+        }
+      ],
+      "objects": []
+    }
+  ]
+}

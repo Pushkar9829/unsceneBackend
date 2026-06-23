@@ -12,6 +12,7 @@ const {
   listUserSeries,
   patchUserSeriesEpisode,
   getCreatorSeriesStatsForUser,
+  triggerSeriesAiAnalysis,
 } = require("./series.service");
 
 const createSeries = async (req, res, next) => {
@@ -122,6 +123,15 @@ const uploadThumbnailMultipart = async (req, res, next) => {
   }
 };
 
+const requestAiAnalyze = async (req, res, next) => {
+  try {
+    const data = await triggerSeriesAiAnalysis(req.user.id, req.params.seriesId);
+    return successResponse(res, data, "AI product-cue analysis started");
+  } catch (error) {
+    return next(error);
+  }
+};
+
 module.exports = {
   createSeries,
   listSeries,
@@ -135,4 +145,5 @@ module.exports = {
   uploadEpisodeMultipart,
   uploadProductMultipart,
   uploadThumbnailMultipart,
+  requestAiAnalyze,
 };

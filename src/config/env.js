@@ -1,11 +1,17 @@
 const path = require("path");
 const dotenv = require("dotenv");
 
-// Prefer backend/src/.env (current project layout), fallback to backend/.env
-dotenv.config({ path: path.resolve(__dirname, "../.env") });
-dotenv.config();
+const srcEnvPath = path.resolve(__dirname, "../.env");
+const rootEnvPath = path.resolve(__dirname, "../../.env");
+
+// src/.env is the source of truth for local/dev
+dotenv.config({ path: srcEnvPath, override: true });
+// optional fallback: backend/.env (does not override src/.env)
+dotenv.config({ path: rootEnvPath });
 
 const env = {
+  nodeEnv: process.env.NODE_ENV || "development",
+  isProduction: process.env.NODE_ENV === "production",
   port: process.env.PORT || 5000,
   mongoUri: process.env.MONGO_URI || "mongodb://127.0.0.1:27017/unscene_ai",
   jwtSecret: process.env.JWT_SECRET || "unsceneai-dev-secret",
@@ -21,7 +27,7 @@ const env = {
   awsCloudFrontDomain: process.env.AWS_CLOUDFRONT_DOMAIN || "",
   adminName: process.env.DEFAULT_ADMIN_NAME || "Super Admin",
   adminEmail: process.env.DEFAULT_ADMIN_EMAIL || "admin@unscene.ai",
-  adminPassword: process.env.DEFAULT_ADMIN_PASSWORD || "Admin@123",
+  defaultAdminPassword: process.env.DEFAULT_ADMIN_PASSWORD || "Admin@123",
   /** Comma-separated extra browser origins for CORS (e.g. https://admin.example.com). */
   corsExtraOrigins: (process.env.CORS_ORIGINS || "")
     .split(",")
@@ -39,6 +45,16 @@ const env = {
   demoOtpEnabled: process.env.DEMO_OTP_ENABLED !== "false",
   demoPhone: process.env.DEMO_PHONE || "9999999999",
   demoOtp: process.env.DEMO_OTP || "123456",
+  /** Product-cue AI service (separate deployment). */
+  aiIngestEnabled: process.env.AI_INGEST_ENABLED !== "false",
+  aiServiceUrl: (process.env.AI_SERVICE_URL || "").replace(/\/+$/, ""),
+  aiServiceApiKey: process.env.AI_SERVICE_API_KEY || "",
+  aiWebhookSecret: process.env.AI_WEBHOOK_SECRET || "",
+  /** Public API origin for callbackUrl in AI job payload. */
+  aiCallbackPublicBaseUrl: (process.env.AI_CALLBACK_PUBLIC_BASE_URL || `http://localhost:${process.env.PORT || 5000}`).replace(
+    /\/+$/,
+    ""
+  ),
 };
 
 module.exports = env;

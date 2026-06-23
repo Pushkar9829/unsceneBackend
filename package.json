@@ -11,6 +11,8 @@
     "seed:product-cues": "node src/scripts/seedEpisodeProductCues.js",
     "seed:vto-demo": "node src/scripts/seedVtoDemo.js",
     "seed:demo-episodes": "node src/scripts/seedDemoUserEpisodes.js",
+    "seed:demo-thumbnail": "node src/scripts/seedDemoSeriesThumbnail.js",
+    "seed:ai-detection": "node src/scripts/seedAiDetectionCues.js",
     "test": "echo \"No tests configured\""
   },
   "keywords": [],

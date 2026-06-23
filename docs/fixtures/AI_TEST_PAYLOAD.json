@@ -1,0 +1,247 @@
+{
+  "_instructions": {
+    "purpose": "Integration test fixture for the UnsceneAI product-cue AI service.",
+    "spec": "See ../AI_PRODUCT_CUE_SERVICE.md for full API contract.",
+    "howToUse": [
+      "1. POST analyzeJobRequest body to your POST /v1/analyze/jobs endpoint.",
+      "2. Download videoUrl and imageUrl fields over HTTPS (public CloudFront URLs).",
+      "3. When done, POST expectedCallbackSuccessReference shape to callbackUrl.",
+      "4. Compare your generated cues against expectedCallbackSuccessReference (ground truth from production seed data). Timestamps need not match exactly; structure and productId mapping must be valid."
+    ],
+    "notes": [
+      "productCues are NOT sent in the job request — your service must produce them.",
+      "Both episodes currently share the same video file (~23s VTO demo clip).",
+      "Replace callbackUrl and jobId when testing against staging."
+    ]
+  },
+  "analyzeJobRequest": {
+    "jobId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "seriesId": "69fe36c51f3977b48b2e7782",
+    "callbackUrl": "https://api.unscene.in/api/v1/internal/ai/product-cues/callback",
+    "episodes": [
+      {
+        "episodeId": "69fe36c91f3977b48b2e7783",
+        "title": "Jsjsj",
+        "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/episodes/1778443081381-6e8cbb62-f03c-4cea-88c6-8ef8cb9f8c5c-vtoVideo.mp4",
+        "videoKey": "users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/episodes/1778443081381-6e8cbb62-f03c-4cea-88c6-8ef8cb9f8c5c-vtoVideo.mp4"
+      },
+      {
+        "episodeId": "69fe36cd1f3977b48b2e7787",
+        "order": 2,
+        "title": "Jsjsjs",
+        "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/episodes/1778443081381-6e8cbb62-f03c-4cea-88c6-8ef8cb9f8c5c-vtoVideo.mp4",
+        "videoKey": "users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/episodes/1778443081381-6e8cbb62-f03c-4cea-88c6-8ef8cb9f8c5c-vtoVideo.mp4"
+      }
+    ],
+    "products": [
+      {
+        "productId": "6a00e35740a5e9c7bb2ff4dc",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443088364-7653cbf2-b80e-4533-9e28-8182e19c0941-1768918281077-IMG-20230821-WA0000.jpg",
+        "purchaseLink": "https://nznd",
+        "category": "non-clothing",
+        "imageKey": "users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443088364-7653cbf2-b80e-4533-9e28-8182e19c0941-1768918281077-IMG-20230821-WA0000.jpg"
+      },
+      {
+        "productId": "6a00e35740a5e9c7bb2ff4dd",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443088623-ef93bb87-4bdf-42a7-9424-32703f9c7761-1777965637265-AA4E7C8F-C926-4607-B96F-A90693A7838E.jpg",
+        "imageKey": "users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443088623-ef93bb87-4bdf-42a7-9424-32703f9c7761-1777965637265-AA4E7C8F-C926-4607-B96F-A90693A7838E.jpg",
+        "purchaseLink": "https://nznd",
+        "category": "clothing"
+      },
+      {
+        "productId": "6a00e35740a5e9c7bb2ff4de",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443090150-5159bcd9-3daa-4866-84fd-c0384069bf66-b3801334-f401-4d92-b9cb-8a8d327427c8-41_(1).png",
+        "imageKey": "users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443090150-5159bcd9-3daa-4866-84fd-c0384069bf66-b3801334-f401-4d92-b9cb-8a8d327427c8-41_(1).png",
+        "purchaseLink": "https://nznd",
+        "category": "clothing"
+      },
+      {
+        "productId": "6a00e35740a5e9c7bb2ff4df",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443091273-2bc2f2bd-5459-4390-9178-6b1879a96ce9-b3801334-f401-4d92-b9cb-8a8d327427c8-41.png",
+        "imageKey": "users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443091273-2bc2f2bd-5459-4390-9178-6b1879a96ce9-b3801334-f401-4d92-b9cb-8a8d327427c8-41.png",
+        "purchaseLink": "https://nznd",
+        "category": "clothing"
+      },
+      {
+        "productId": "6a00e35740a5e9c7bb2ff4e0",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443094611-5c48a3ae-2f3a-48e7-8ecc-484e61a283ef-WhatsApp_Image_2026-04-02_at_4.42.16_PM_(1).jpeg",
+        "imageKey": "users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443094611-5c48a3ae-2f3a-48e7-8ecc-484e61a283ef-WhatsApp_Image_2026-04-02_at_4.42.16_PM_(1).jpeg",
+        "purchaseLink": "https://nznd",
+        "category": "clothing"
+      },
+      {
+        "productId": "6a00e35740a5e9c7bb2ff4e1",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443094897-28e4d5b1-8ab0-4f0c-bde5-f1c21077f7fa-WhatsApp_Image_2026-04-02_at_4.42.16_PM.jpeg",
+        "imageKey": "users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443094897-28e4d5b1-8ab0-4f0c-bde5-f1c21077f7fa-WhatsApp_Image_2026-04-02_at_4.42.16_PM.jpeg",
+        "purchaseLink": "https://nznd",
+        "category": "clothing"
+      }
+    ]
+  },
+  "expectedCallbackDetectionFormat": {
+    "_note": "New AI model output with clothing/objects ranges + bbox. Backend converts to productCues automatically.",
+    "jobId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "seriesId": "69fe36c51f3977b48b2e7782",
+    "status": "completed",
+    "episodes": [
+      {
+        "episodeId": "69fe36c91f3977b48b2e7783",
+        "clothing": [
+          {
+            "category": "trousers",
+            "ranges": [{ "start": 11, "end": 12, "bbox": [346, 864, 700, 1444] }]
+          },
+          {
+            "category": "dress",
+            "ranges": [{ "start": 13, "end": 14, "bbox": [650, 1498, 727, 1689] }]
+          }
+        ],
+        "objects": []
+      }
+    ]
+  },
+  "expectedCallbackSuccessReference": {
+    "_note": "Ground-truth cues already in DB (seedVtoDemo). Use to validate your output shape and rough timestamp accuracy. Echo the same jobId you received.",
+    "jobId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "seriesId": "69fe36c51f3977b48b2e7782",
+    "status": "completed",
+    "episodes": [
+      {
+        "episodeId": "69fe36c91f3977b48b2e7783",
+        "cues": [
+          {
+            "timestampSeconds": 3,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4dc",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443088364-7653cbf2-b80e-4533-9e28-8182e19c0941-1768918281077-IMG-20230821-WA0000.jpg",
+            "title": "Accessory A",
+            "displayDurationSeconds": 2
+          },
+          {
+            "timestampSeconds": 3,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4dd",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443088623-ef93bb87-4bdf-42a7-9424-32703f9c7761-1777965637265-AA4E7C8F-C926-4607-B96F-A90693A7838E.jpg",
+            "title": "Accessory B",
+            "displayDurationSeconds": 2
+          },
+          {
+            "timestampSeconds": 8,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4de",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443090150-5159bcd9-3daa-4866-84fd-c0384069bf66-b3801334-f401-4d92-b9cb-8a8d327427c8-41_(1).png",
+            "title": "Look 4s",
+            "displayDurationSeconds": 4
+          },
+          {
+            "timestampSeconds": 15,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4e0",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443094611-5c48a3ae-2f3a-48e7-8ecc-484e61a283ef-WhatsApp_Image_2026-04-02_at_4.42.16_PM_(1).jpeg",
+            "title": "Size shirt",
+            "displayDurationSeconds": 2.5
+          },
+          {
+            "timestampSeconds": 15,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4e1",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443094897-28e4d5b1-8ab0-4f0c-bde5-f1c21077f7fa-WhatsApp_Image_2026-04-02_at_4.42.16_PM.jpeg",
+            "title": "Size pant",
+            "displayDurationSeconds": 2.5
+          },
+          {
+            "timestampSeconds": 20,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4df",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443091273-2bc2f2bd-5459-4390-9178-6b1879a96ce9-b3801334-f401-4d92-b9cb-8a8d327427c8-41.png",
+            "title": "Studio look",
+            "displayDurationSeconds": 2
+          }
+        ]
+      },
+      {
+        "episodeId": "69fe36cd1f3977b48b2e7787",
+        "cues": [
+          {
+            "timestampSeconds": 4,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4dc",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443088364-7653cbf2-b80e-4533-9e28-8182e19c0941-1768918281077-IMG-20230821-WA0000.jpg",
+            "title": "Dual range A",
+            "displayDurationSeconds": 3
+          },
+          {
+            "timestampSeconds": 4,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4dd",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443088623-ef93bb87-4bdf-42a7-9424-32703f9c7761-1777965637265-AA4E7C8F-C926-4607-B96F-A90693A7838E.jpg",
+            "title": "Dual range B",
+            "displayDurationSeconds": 3
+          },
+          {
+            "timestampSeconds": 11,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4de",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443090150-5159bcd9-3daa-4866-84fd-c0384069bf66-b3801334-f401-4d92-b9cb-8a8d327427c8-41_(1).png",
+            "title": "Single 3s",
+            "displayDurationSeconds": 3
+          },
+          {
+            "timestampSeconds": 17,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4e0",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443094611-5c48a3ae-2f3a-48e7-8ecc-484e61a283ef-WhatsApp_Image_2026-04-02_at_4.42.16_PM_(1).jpeg",
+            "title": "Chart duo 1",
+            "displayDurationSeconds": 2
+          },
+          {
+            "timestampSeconds": 17,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4e1",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443094897-28e4d5b1-8ab0-4f0c-bde5-f1c21077f7fa-WhatsApp_Image_2026-04-02_at_4.42.16_PM.jpeg",
+            "title": "Chart duo 2",
+            "displayDurationSeconds": 2
+          },
+          {
+            "timestampSeconds": 20.5,
+            "seriesProductId": "6a00e35740a5e9c7bb2ff4df",
+            "purchaseLink": "https://nznd",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/products/1778443091273-2bc2f2bd-5459-4390-9178-6b1879a96ce9-b3801334-f401-4d92-b9cb-8a8d327427c8-41.png",
+            "title": "Tail card",
+            "displayDurationSeconds": 2
+          }
+        ]
+      }
+    ]
+  },
+  "analyzeJobRequestMinimal": {
+    "_note": "Smaller fixture: 1 episode, 1 product, no pre-existing cues (draft series from DB).",
+    "jobId": "b2c3d4e5-f6a7-8901-bcde-f23456789012",
+    "seriesId": "6a022c2e1b4f1400fb4ad972",
+    "callbackUrl": "https://api.unscene.in/api/v1/internal/ai/product-cues/callback",
+    "episodes": [
+      {
+        "episodeId": "6a022c3a1b4f1400fb4ad973",
+        "order": 1,
+        "title": "Hguvcd",
+        "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6a022c2e1b4f1400fb4ad972/episodes/1778527285731-9deb8e89-17a3-4f49-86bf-b3b25da10c42-1000116624.mp4",
+        "videoKey": "users/6a0226f4b660482225067665/series/6a022c2e1b4f1400fb4ad972/episodes/1778527285731-9deb8e89-17a3-4f49-86bf-b3b25da10c42-1000116624.mp4"
+      }
+    ],
+    "products": [
+      {
+        "productId": "6a022c3b1b4f1400fb4ad977",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6a022c2e1b4f1400fb4ad972/products/1778527291042-7aa6645d-46b3-41f4-b639-e4c8653a968c-1000117222.jpg",
+        "imageKey": "users/6a0226f4b660482225067665/series/6a022c2e1b4f1400fb4ad972/products/1778527291042-7aa6645d-46b3-41f4-b639-e4c8653a968c-1000117222.jpg",
+        "purchaseLink": "https://578gh",
+        "category": "clothing"
+      }
+    ]
+  },
+  "callbackFailureExample": {
+    "jobId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "seriesId": "69fe36c51f3977b48b2e7782",
+    "status": "failed",
+    "error": "Could not download video for episode 69fe36c91f3977b48b2e7783"
+  }
+}

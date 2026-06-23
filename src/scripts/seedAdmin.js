@@ -12,7 +12,7 @@ const seedAdmin = async () => {
     process.exit(0);
   }
 
-  const passwordHash = await hashPassword(env.adminPassword);
+  const passwordHash = await hashPassword(env.defaultAdminPassword);
   await createAdmin({
     name: env.adminName,
     email: env.adminEmail,
