@@ -8,6 +8,7 @@ const {
   isAiDetectionEpisodeShape,
 } = require("../utils/aiDetection");
 const { uploadBufferToS3 } = require("./s3.service");
+const { logAiExchange } = require("../utils/aiLogger");
 const {
   findSeriesById,
   updateSeriesById,
@@ -276,6 +277,13 @@ const postAnalyzeJob = async (payload) => {
     headers.Authorization = `Bearer ${env.aiServiceApiKey}`;
   }
 
+  logAiExchange("outbound", {
+    method: "POST",
+    url,
+    headers,
+    requestBody: payload,
+  });
+
   const res = await fetch(url, {
     method: "POST",
     headers,
@@ -291,6 +299,14 @@ const postAnalyzeJob = async (payload) => {
       data = { raw: text };
     }
   }
+
+  logAiExchange("outbound", {
+    method: "POST",
+    url,
+    status: res.status,
+    responseBody: data,
+    note: res.ok ? "AI service accepted job" : "AI service error",
+  });
 
   return { ok: res.ok, status: res.status, data };
 };
