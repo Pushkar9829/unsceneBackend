@@ -17,12 +17,31 @@ const normalizeBbox = (raw) => {
   return nums;
 };
 
+const GENERIC_LABELS = new Set(["non-clothing", "non clothing", "clothing", "object"]);
+
 const titleFromCategory = (category) => {
   const c = String(category || "").trim();
   if (!c) {
     return "";
   }
   return c.charAt(0).toUpperCase() + c.slice(1);
+};
+
+/** Prefer catalog product name; fall back to purchaseLink when AI category is generic (e.g. non-clothing). */
+const cueTitleFromProduct = (product, category) => {
+  const explicit = product?.title != null ? String(product.title).trim() : "";
+  if (explicit && !GENERIC_LABELS.has(explicit.toLowerCase())) {
+    return explicit;
+  }
+  const purchaseLink = product?.purchaseLink != null ? String(product.purchaseLink).trim() : "";
+  if (purchaseLink) {
+    return purchaseLink.charAt(0).toUpperCase() + purchaseLink.slice(1);
+  }
+  const cat = String(category || "").trim().toLowerCase();
+  if (cat && !GENERIC_LABELS.has(cat)) {
+    return titleFromCategory(category);
+  }
+  return "";
 };
 
 const pushRangeCue = (out, range, category, detectionType, products, indexRef) => {
@@ -52,7 +71,7 @@ const pushRangeCue = (out, range, category, detectionType, products, indexRef) =
     bbox,
     detectionCategory: String(category || "").trim().toLowerCase(),
     detectionType,
-    title: titleFromCategory(category),
+    title: product ? cueTitleFromProduct(product, category) : titleFromCategory(category),
   };
 
   if (product) {

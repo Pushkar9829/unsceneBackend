@@ -41,6 +41,7 @@ const ensureDemoUser = async () => {
 const buildProducts = (products) =>
   (products || []).map((p) => ({
     _id: oid(p.productId),
+    title: p.title != null ? String(p.title).trim() : "",
     imageUrl: String(p.imageUrl || "").trim(),
     imageKey: String(p.imageKey || "").trim(),
     purchaseLink: String(p.purchaseLink || "").trim(),

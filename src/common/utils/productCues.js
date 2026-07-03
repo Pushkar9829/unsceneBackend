@@ -12,6 +12,34 @@ const assertObjectId = (id, label = "id") => {
   }
 };
 
+const GENERIC_LABELS = new Set(["non-clothing", "non clothing", "clothing", "object"]);
+
+const isGenericProductLabel = (value) => GENERIC_LABELS.has(String(value || "").trim().toLowerCase());
+
+const titleFromPurchaseLink = (raw) => {
+  const link = raw != null ? String(raw).trim() : "";
+  if (!link) {
+    return "";
+  }
+  return link.charAt(0).toUpperCase() + link.slice(1);
+};
+
+const resolveCatalogProductTitle = (product, fallbackCategory = "") => {
+  const explicit = product?.title != null ? String(product.title).trim() : "";
+  if (explicit && !isGenericProductLabel(explicit)) {
+    return explicit.slice(0, 200);
+  }
+  const fromLink = titleFromPurchaseLink(product?.purchaseLink);
+  if (fromLink) {
+    return fromLink.slice(0, 200);
+  }
+  const category = String(fallbackCategory || "").trim();
+  if (category && !isGenericProductLabel(category)) {
+    return (category.charAt(0).toUpperCase() + category.slice(1)).slice(0, 200);
+  }
+  return "";
+};
+
 /**
  * Normalize episode product cues (timestamp → showcase card).
  * Pass `series` so cues may reference `seriesProductId` and inherit image/link from series.products.
@@ -46,7 +74,7 @@ const parseProductCuesInput = (raw, series = null) => {
     let purchaseLink = c.purchaseLink != null ? String(c.purchaseLink).trim() : "";
     let imageUrl = c.imageUrl != null ? String(c.imageUrl).trim() : "";
     let imageKey = c.imageKey != null ? String(c.imageKey).trim() : "";
-    const title = c.title != null ? String(c.title).trim().slice(0, 200) : "";
+    let title = c.title != null ? String(c.title).trim().slice(0, 200) : "";
 
     const bboxRaw = c.bbox;
     let bbox;
@@ -93,7 +121,17 @@ const parseProductCuesInput = (raw, series = null) => {
         if (!imageKey && p.imageKey) {
           imageKey = String(p.imageKey).trim();
         }
+        if (!title || isGenericProductLabel(title)) {
+          const catalogTitle = resolveCatalogProductTitle(p, detectionCategory);
+          if (catalogTitle) {
+            title = catalogTitle;
+          }
+        }
       }
+    }
+
+    if ((!title || isGenericProductLabel(title)) && purchaseLink) {
+      title = titleFromPurchaseLink(purchaseLink).slice(0, 200);
     }
 
     if (!imageUrl && !bbox) {

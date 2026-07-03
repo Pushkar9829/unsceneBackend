@@ -47,6 +47,7 @@ const buildEpisodeAnalyzeEntry = (ep) => {
 const buildProductAnalyzeEntry = (p) => {
   const entry = {
     productId: String(p._id),
+    title: p.title != null ? String(p.title).trim() : "",
     imageUrl: String(p.imageUrl || "").trim(),
     purchaseLink: p.purchaseLink != null ? String(p.purchaseLink).trim() : "",
     category: p.category || "non-clothing",
@@ -314,6 +315,21 @@ const postAnalyzeJob = async (payload) => {
 /**
  * Queue AI analysis for a series (fire-and-forget safe to call without await).
  */
+const normalizeAiJobStatus = (value) =>
+  value != null ? String(value).trim().toLowerCase() : "";
+
+/** AI service accepted job async — wait for webhook callback. */
+const isAsyncJobAccepted = (httpStatus, data, ok) => {
+  const jobStatus = normalizeAiJobStatus(data?.status);
+  if (httpStatus === 202) {
+    return true;
+  }
+  if (!ok) {
+    return false;
+  }
+  return ["processing", "accepted", "queued", "pending"].includes(jobStatus);
+};
+
 const queueSeriesAiAnalysis = async (seriesId) => {
   if (!isIngestConfigured()) {
     console.warn(
@@ -350,7 +366,7 @@ const queueSeriesAiAnalysis = async (seriesId) => {
     });
   }
 
-  if (status === 202 || (ok && data?.status === "processing")) {
+  if (isAsyncJobAccepted(status, data, ok)) {
     return { seriesId, aiProcessingStatus: AI_PROCESSING_STATUS.PROCESSING, jobId };
   }
 

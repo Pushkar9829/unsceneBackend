@@ -355,16 +355,44 @@ const run = async () => {
       json: callbackBody,
     });
     logBlock("CALLBACK APPLIED", callbackRes?.data);
-
-    const finalSeries = await api("GET", `/api/v1/user/series/${seriesId}`, { token });
-    const ep = (finalSeries?.data?.episodes || [])[0];
-    logBlock("FINAL EPISODE CUES", {
-      episodeId: ep?._id,
-      cueCount: ep?.productCues?.length || 0,
-      sampleCue: ep?.productCues?.[0],
-      aiProcessingStatus: finalSeries?.data?.aiProcessingStatus,
-    });
+  } else {
+    logBlock("WAITING FOR REAL AI CALLBACK", { seriesId, timeoutSec: 120 });
+    const start = Date.now();
+    const timeoutMs = 120000;
+    while (Date.now() - start < timeoutMs) {
+      const poll = await api("GET", `/api/v1/user/series/${seriesId}`, { token });
+      series = poll?.data || series;
+      const st = series?.aiProcessingStatus;
+      if (st === "completed") {
+        logBlock("AI COMPLETED", {
+          aiJobId: series?.aiJobId,
+          elapsedSec: Math.round((Date.now() - start) / 1000),
+        });
+        break;
+      }
+      if (st === "failed") {
+        throw new Error(`AI processing failed: ${series?.aiError || "unknown"}`);
+      }
+      logBlock("AI POLL", {
+        aiProcessingStatus: st,
+        aiJobId: series?.aiJobId,
+        elapsedSec: Math.round((Date.now() - start) / 1000),
+      });
+      await sleep(3000);
+    }
+    if (series?.aiProcessingStatus !== "completed") {
+      throw new Error("Timed out waiting for AI callback (120s)");
+    }
   }
+
+  const finalSeries = await api("GET", `/api/v1/user/series/${seriesId}`, { token });
+  const ep = (finalSeries?.data?.episodes || [])[0];
+  logBlock("FINAL EPISODE CUES", {
+    episodeId: ep?._id,
+    cueCount: ep?.productCues?.length || 0,
+    sampleCue: ep?.productCues?.[0],
+    aiProcessingStatus: finalSeries?.data?.aiProcessingStatus,
+  });
 
   logBlock("DONE", {
     seriesId,

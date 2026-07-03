@@ -33,6 +33,8 @@ const validateProductionEnv = () => {
 
   if (env.aiIngestEnabled && !env.aiServiceUrl) {
     warnings.push("AI_INGEST_ENABLED but AI_SERVICE_URL is empty — AI analysis will be skipped.");
+  } else if (env.aiIngestEnabled && env.aiServiceUrl) {
+    console.log(`[config] AI_SERVICE_URL=${env.aiServiceUrl}`);
   }
 
   if (env.defaultAdminPassword === "Admin@123") {

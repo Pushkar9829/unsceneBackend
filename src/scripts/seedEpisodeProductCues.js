@@ -30,7 +30,12 @@ const buildCuesForProduct = (product, timestampList) => {
     purchaseLink,
     imageUrl,
     imageKey,
-    title: idx === 0 ? "Shop this look" : "Shop this look",
+    title:
+      product.title != null && String(product.title).trim()
+        ? String(product.title).trim()
+        : idx === 0
+          ? "Shop this look"
+          : "Shop this look",
     seriesProductId: product._id,
   }));
 };

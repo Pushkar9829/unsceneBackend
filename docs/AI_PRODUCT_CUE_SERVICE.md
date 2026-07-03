@@ -92,16 +92,17 @@ All requests use `Content-Type: application/json`.
 
 #### Response — async (preferred)
 
-**`202 Accepted`**
+**`202 Accepted`** or **`200 OK`** with async status:
 
 ```json
 {
   "jobId": "550e8400-e29b-41d4-a716-446655440000",
   "seriesId": "69fe36c51f3977b48b2e7782",
-  "status": "processing",
-  "message": "Job accepted"
+  "status": "processing"
 }
 ```
+
+Accepted `status` values for async jobs: `processing`, `accepted`, `queued`, `pending`.
 
 #### Response — sync (optional, dev)
 

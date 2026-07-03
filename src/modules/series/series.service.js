@@ -134,7 +134,7 @@ const registerEpisode = async (userId, seriesId, { title, order, videoKey, produ
   return updated;
 };
 
-const registerProduct = async (userId, seriesId, { purchaseLink, imageKey, category }) => {
+const registerProduct = async (userId, seriesId, { title, purchaseLink, imageKey, category }) => {
   await requireSeriesOwner(userId, seriesId);
   if (!imageKey || String(imageKey).trim() === "") {
     throw httpError(400, "imageKey is required");
@@ -143,9 +143,23 @@ const registerProduct = async (userId, seriesId, { purchaseLink, imageKey, categ
     throw httpError(400, "category must be 'clothing' or 'non-clothing'");
   }
 
+  const normalizedLink = purchaseLink != null ? String(purchaseLink).trim() : "";
+  let normalizedTitle = title != null ? String(title).trim().slice(0, 200) : "";
+  if (!normalizedTitle && normalizedLink) {
+    const looksLikeUrl =
+      /^[a-z][a-z0-9+.-]*:/i.test(normalizedLink) || normalizedLink.includes(".");
+    if (!looksLikeUrl) {
+      normalizedTitle = normalizedLink.charAt(0).toUpperCase() + normalizedLink.slice(1);
+    }
+  }
+  if (!normalizedTitle) {
+    throw httpError(400, "title is required");
+  }
+
   const imageUrl = getPublicFileUrl(imageKey);
   const product = {
-    purchaseLink: purchaseLink != null ? String(purchaseLink).trim() : "",
+    title: normalizedTitle,
+    purchaseLink: normalizedLink,
     imageKey,
     imageUrl,
     category,
@@ -185,7 +199,7 @@ const uploadEpisodeAndRegister = async (
 const uploadProductAndRegister = async (
   userId,
   seriesId,
-  { purchaseLink, category },
+  { title, purchaseLink, category },
   file
 ) => {
   await requireSeriesOwner(userId, seriesId);
@@ -199,6 +213,7 @@ const uploadProductAndRegister = async (
     body: file.buffer,
   });
   return registerProduct(userId, seriesId, {
+    title,
     purchaseLink,
     category,
     imageKey: uploaded.key,

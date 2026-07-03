@@ -61,6 +61,8 @@ const episodeEntrySchema = new mongoose.Schema(
 
 const productEntrySchema = new mongoose.Schema(
   {
+    /** Creator-defined product name shown in player and shop screens. */
+    title: { type: String, trim: true, default: "" },
     purchaseLink: { type: String, trim: true, default: "" },
     imageKey: { type: String, required: true },
     imageUrl: { type: String, required: true },
