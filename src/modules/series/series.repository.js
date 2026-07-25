@@ -1,6 +1,19 @@
 const Series = require("./series.model");
+const { AI_PROCESSING_STATUS } = require("../../config/constants");
 
 const escapeRegex = (value) => String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+/** Public catalogue: series only visible after AI processing completed. */
+const catalogAiReadyClause = () => ({
+  aiProcessingStatus: AI_PROCESSING_STATUS.COMPLETED,
+});
+
+const isSeriesCatalogAiReady = (series) => {
+  if (!series) {
+    return false;
+  }
+  return String(series.aiProcessingStatus || "") === AI_PROCESSING_STATUS.COMPLETED;
+};
 
 const createSeries = (payload) => Series.create(payload);
 
@@ -13,10 +26,12 @@ const deleteAllSeriesByUser = (userId) => Series.deleteMany({ user: userId });
 
 const findSeriesCatalog = ({ q, status, genreId, skip, limit }) => {
   const filter = {};
+  const and = [];
   if (status) {
     filter.status = status;
     if (status === "submitted") {
       filter.catalogHidden = { $ne: true };
+      and.push(catalogAiReadyClause());
     }
   }
   if (genreId) {
@@ -25,7 +40,10 @@ const findSeriesCatalog = ({ q, status, genreId, skip, limit }) => {
   if (q !== undefined && q !== null && String(q).trim() !== "") {
     const term = escapeRegex(String(q).trim());
     const regex = new RegExp(term, "i");
-    filter.$or = [{ type: regex }, { name: regex }];
+    and.push({ $or: [{ type: regex }, { name: regex }] });
+  }
+  if (and.length) {
+    filter.$and = and;
   }
 
   return Promise.all([
@@ -116,6 +134,8 @@ module.exports = {
   findSeriesByUser,
   deleteAllSeriesByUser,
   findSeriesCatalog,
+  catalogAiReadyClause,
+  isSeriesCatalogAiReady,
   adminListSeries,
   aggregateSeriesStatusCounts,
   aggregateTotalEpisodes,

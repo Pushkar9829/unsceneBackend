@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { findSeriesById } = require("../series/series.repository");
+const { findSeriesById, isSeriesCatalogAiReady } = require("../series/series.repository");
 const {
   upsertByUserSeries,
   findByUserAndSeries,
@@ -26,7 +26,10 @@ const assertUserMayWatchSeries = (userId, series) => {
   }
   const uid = String(userId);
   const ownerId = series.user != null ? String(series.user) : "";
-  const submittedPublic = series.status === "submitted" && series.catalogHidden !== true;
+  const submittedPublic =
+    series.status === "submitted" &&
+    series.catalogHidden !== true &&
+    isSeriesCatalogAiReady(series);
   if (submittedPublic || uid === ownerId) {
     return;
   }

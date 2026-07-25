@@ -77,7 +77,7 @@ const ensureSeries = async (userId, setup) => {
     episodes,
     episodeCount: episodes.length,
     productCount: products.length,
-    aiProcessingStatus: "idle",
+    aiProcessingStatus: "completed",
   };
 
   let series = await Series.findById(seriesId);

@@ -13,7 +13,7 @@ const {
   getPublicFileUrl,
   deleteObjectByKey,
 } = require("../../common/services/s3.service");
-const { findSeriesById, findSeriesByUser, deleteAllSeriesByUser } = require("../series/series.repository");
+const { findSeriesById, findSeriesByUser, deleteAllSeriesByUser, catalogAiReadyClause, isSeriesCatalogAiReady } = require("../series/series.repository");
 const Series = require("../series/series.model");
 const { recordAnalyticsEvent } = require("../analytics/analytics.service");
 const otpService = require("../../common/services/otpService");
@@ -37,7 +37,9 @@ const assertSeriesId = (seriesId) => {
 };
 
 const assertFavoritableSeries = async (seriesId) => {
-  const doc = await findSeriesById(seriesId).select("status catalogHidden").lean();
+  const doc = await findSeriesById(seriesId)
+    .select("status catalogHidden aiProcessingStatus episodes.productCues")
+    .lean();
   if (!doc) {
     throw httpError(404, "Series not found");
   }
@@ -46,6 +48,9 @@ const assertFavoritableSeries = async (seriesId) => {
   }
   if (doc.catalogHidden) {
     throw httpError(400, "Series is not available");
+  }
+  if (!isSeriesCatalogAiReady(doc)) {
+    throw httpError(400, "Series is still processing and not available yet");
   }
 };
 
@@ -188,6 +193,7 @@ const listFavoriteSeries = async (userId, query = {}) => {
     _id: { $in: pageIds },
     status: "submitted",
     catalogHidden: { $ne: true },
+    ...catalogAiReadyClause(),
   })
     .select("-__v")
     .lean();

@@ -131,7 +131,7 @@ Optional header (only when backend has `AI_WEBHOOK_SECRET` set): `X-AI-Webhook-S
 
 #### Success body (detection format — preferred for bbox overlays)
 
-The AI service may return **detection ranges with bounding boxes** instead of pre-built cues. The backend converts this into `episode.productCues[]` (with `bbox`, `endTimestampSeconds`, `detectionCategory`) and maps catalog products round-robin by `clothing` vs `non-clothing`.
+The AI service may return **detection ranges with bounding boxes** instead of pre-built cues. The backend converts this into `episode.productCues[]` (with `bbox`, `endTimestampSeconds`, `detectionCategory`) and maps catalog products by **category synonym match** (clothing bucket vs non-clothing), not round-robin.
 
 ```json
 {
@@ -145,17 +145,35 @@ The AI service may return **detection ranges with bounding boxes** instead of pr
         {
           "category": "trousers",
           "ranges": [
-            { "start": 11, "end": 12, "bbox": [346, 864, 700, 1444] }
+            {
+              "start": 11.0,
+              "end": 11.4,
+              "bbox": [346, 864, 700, 1444],
+              "cropImageUrl": "https://cdn.example.com/crops/ep1-t11.jpg"
+            }
           ]
         },
         {
           "category": "dress",
           "ranges": [
-            { "start": 13, "end": 14, "bbox": [650, 1498, 727, 1689] }
+            { "start": 13.0, "end": 13.4, "bbox": [650, 1498, 727, 1689] }
           ]
         }
       ],
-      "objects": []
+      "objects": [
+        {
+          "category": "glasses",
+          "productId": "69fe36c6000000000000000b",
+          "ranges": [
+            {
+              "start": 20.0,
+              "end": 20.4,
+              "bbox": [400, 200, 520, 280],
+              "cropImageUrl": "https://cdn.example.com/crops/ep1-glasses.jpg"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
@@ -163,10 +181,13 @@ The AI service may return **detection ranges with bounding boxes** instead of pr
 
 | Detection field | Notes |
 |-----------------|--------|
-| `ranges[].start` / `end` | Seconds in episode video; overlay visible in `[start, end)`. |
+| `ranges[].start` / `end` | Seconds in episode video; keep windows **≤ 0.5s** when possible. Backend clamps longer ranges to 0.5s to avoid bbox drift (e.g. shirt box on a later face close-up). |
 | `ranges[].bbox` | `[x1, y1, x2, y2]` pixel coords on the **source video frame** (used by mobile player overlays). |
-| `clothing` | Mapped to series products with `category: "clothing"`. |
-| `objects` | Mapped to series products with `category: "non-clothing"`. |
+| `ranges[].cropImageUrl` | Optional HTTPS crop of the detected region. Preferred for the in-player top-right miniature icon. |
+| `ranges[].imageUrl` / `detectionImageUrl` | Aliases for `cropImageUrl`. |
+| `productId` / `seriesProductId` | Optional on item or range; preferred over synonym matching. |
+| `clothing` | Mapped to series products with `category: "clothing"`. Clothing type labels (shirt, tshirt, dress, …) are stored/displayed as **Clothing**. |
+| `objects` | Mapped to series products with `category: "non-clothing"` using synonym groups (e.g. glasses/specs ≠ headphones). |
 
 #### Success body (legacy cue format)
 

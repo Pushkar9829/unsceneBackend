@@ -96,6 +96,8 @@ On `GET /api/v1/user/series/:id` (and list), documents now include:
 
 **Suggested app UX (follow-up):** After submit, poll series detail until `aiProcessingStatus` is `completed` or `failed`; show “Processing shoppable moments…” while `pending` / `processing`.
 
+**Public catalogue:** `GET /api/v1/series` only returns submitted series where `aiProcessingStatus` is `completed`. Pending/processing/failed/skipped series stay hidden from Home and Shop The Look.
+
 ---
 
 ## 6. Preconditions before queueing

@@ -14,7 +14,49 @@ const assertObjectId = (id, label = "id") => {
 
 const GENERIC_LABELS = new Set(["non-clothing", "non clothing", "clothing", "object"]);
 
+const CLOTHING_TYPE_LABELS = new Set([
+  "clothing",
+  "apparel",
+  "outfit",
+  "shirt",
+  "tshirt",
+  "t-shirt",
+  "tee",
+  "top",
+  "blouse",
+  "trousers",
+  "pants",
+  "jeans",
+  "shorts",
+  "dress",
+  "skirt",
+  "jacket",
+  "coat",
+  "hoodie",
+  "sweater",
+  "jumper",
+  "kurta",
+  "saree",
+  "sari",
+  "suit",
+  "blazer",
+  "cardigan",
+  "vest",
+  "tank",
+  "romper",
+  "jumpsuit",
+]);
+
 const isGenericProductLabel = (value) => GENERIC_LABELS.has(String(value || "").trim().toLowerCase());
+
+const isClothingTypeLabel = (value) => {
+  const token = String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  return Boolean(token) && CLOTHING_TYPE_LABELS.has(token);
+};
 
 const titleFromPurchaseLink = (raw) => {
   const link = raw != null ? String(raw).trim() : "";
@@ -24,18 +66,27 @@ const titleFromPurchaseLink = (raw) => {
   return link.charAt(0).toUpperCase() + link.slice(1);
 };
 
-const resolveCatalogProductTitle = (product, fallbackCategory = "") => {
+const resolveCatalogProductTitle = (product, fallbackCategory = "", detectionType = "") => {
+  const treatAsClothing =
+    detectionType === "clothing" || isClothingTypeLabel(fallbackCategory) || fallbackCategory === "clothing";
+
   const explicit = product?.title != null ? String(product.title).trim() : "";
   if (explicit && !isGenericProductLabel(explicit)) {
+    if (treatAsClothing && isClothingTypeLabel(explicit)) {
+      return "Clothing";
+    }
     return explicit.slice(0, 200);
+  }
+  if (treatAsClothing) {
+    return "Clothing";
+  }
+  const category = String(fallbackCategory || "").trim();
+  if (category && !isGenericProductLabel(category) && !isClothingTypeLabel(category)) {
+    return (category.charAt(0).toUpperCase() + category.slice(1)).slice(0, 200);
   }
   const fromLink = titleFromPurchaseLink(product?.purchaseLink);
   if (fromLink) {
     return fromLink.slice(0, 200);
-  }
-  const category = String(fallbackCategory || "").trim();
-  if (category && !isGenericProductLabel(category)) {
-    return (category.charAt(0).toUpperCase() + category.slice(1)).slice(0, 200);
   }
   return "";
 };
@@ -121,8 +172,8 @@ const parseProductCuesInput = (raw, series = null) => {
         if (!imageKey && p.imageKey) {
           imageKey = String(p.imageKey).trim();
         }
-        if (!title || isGenericProductLabel(title)) {
-          const catalogTitle = resolveCatalogProductTitle(p, detectionCategory);
+        if (!title || isGenericProductLabel(title) || isClothingTypeLabel(title)) {
+          const catalogTitle = resolveCatalogProductTitle(p, detectionCategory, detectionType);
           if (catalogTitle) {
             title = catalogTitle;
           }
@@ -130,8 +181,11 @@ const parseProductCuesInput = (raw, series = null) => {
       }
     }
 
-    if ((!title || isGenericProductLabel(title)) && purchaseLink) {
+    if ((!title || isGenericProductLabel(title)) && purchaseLink && !isClothingTypeLabel(detectionCategory) && detectionType !== "clothing") {
       title = titleFromPurchaseLink(purchaseLink).slice(0, 200);
+    }
+    if ((!title || isGenericProductLabel(title) || isClothingTypeLabel(title)) && (detectionType === "clothing" || isClothingTypeLabel(detectionCategory))) {
+      title = "Clothing";
     }
 
     if (!imageUrl && !bbox) {
