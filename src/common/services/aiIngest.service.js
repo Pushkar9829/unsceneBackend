@@ -285,11 +285,36 @@ const postAnalyzeJob = async (payload) => {
     requestBody: payload,
   });
 
-  const res = await fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(payload),
-  });
+  let res;
+  try {
+    res = await fetch(url, {
+      method: "POST",
+      headers,
+      body: JSON.stringify(payload),
+    });
+  } catch (err) {
+    const cause = err?.cause;
+    const detail = [
+      err?.message || "fetch failed",
+      cause?.code,
+      cause?.message,
+      cause?.syscall,
+      cause?.address,
+      cause?.port,
+    ]
+      .filter(Boolean)
+      .join(" | ");
+    logAiExchange("outbound", {
+      method: "POST",
+      url,
+      status: 0,
+      responseBody: { error: detail },
+      note: "AI service network error (often IPv6 unreachable on EC2 — prefer ipv4first)",
+    });
+    const wrapped = httpError(502, `AI service unreachable: ${detail}`);
+    wrapped.cause = cause || err;
+    throw wrapped;
+  }
 
   const text = await res.text();
   let data = {};
@@ -355,7 +380,20 @@ const queueSeriesAiAnalysis = async (seriesId) => {
 
   await markAiStatus(seriesId, { aiProcessingStatus: AI_PROCESSING_STATUS.PROCESSING });
 
-  const { ok, status, data } = await postAnalyzeJob(payload);
+  let ok;
+  let status;
+  let data;
+  try {
+    ({ ok, status, data } = await postAnalyzeJob(payload));
+  } catch (err) {
+    const errMsg = err?.message || "AI service unreachable";
+    await markAiStatus(seriesId, {
+      aiProcessingStatus: AI_PROCESSING_STATUS.FAILED,
+      aiError: String(errMsg).slice(0, 2000),
+      aiCompletedAt: new Date(),
+    });
+    throw err.statusCode ? err : httpError(502, errMsg);
+  }
 
   if (status === 200 && data?.status === "completed" && Array.isArray(data?.episodes)) {
     return applyProductCueResults(seriesId, {
