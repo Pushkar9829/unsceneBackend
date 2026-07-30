@@ -1,0 +1,408 @@
+{
+  "_instructions": {
+    "purpose": "Demo series/episode fixture — 1 episode video + clothing and non-clothing products, wired end-to-end through the AI model API.",
+    "codeRefs": {
+      "outboundPayload": "backend/src/common/services/aiIngest.service.js → buildAnalyzePayload / buildEpisodeAnalyzeEntry / buildProductAnalyzeEntry",
+      "outboundRequest": "backend/src/common/services/aiIngest.service.js → postAnalyzeJob (POST {AI_SERVICE_URL}/v1/analyze/jobs)",
+      "callbackHandler": "backend/src/modules/ai/ai.controller.js → applyProductCueResults",
+      "storedShape": "backend/src/modules/series/series.model.js → episodeProductCueSchema"
+    },
+    "media": {
+      "episodeVideo": "c:\\Users\\PushkarLS68\\Downloads\\WhatsApp Video 2026-07-31 at 12.38.21 AM.mp4",
+      "clothing": ["shirt.png"],
+      "nonClothing": ["earrings.png", "headphones.png", "specs.png"]
+    },
+    "purchaseLink": "https://purchase.link/demo (same demo link on every product)",
+    "flow": [
+      "1. POST /api/v1/user/series                      → seriesId",
+      "2. POST /api/v1/user/series/:id/upload/presign   → uploadUrl + key (per file)",
+      "3. PUT  uploadUrl (S3)                           → upload bytes",
+      "4. POST /api/v1/user/series/:id/episodes         → { videoKey, title, order }",
+      "5. POST /api/v1/user/series/:id/products         → { imageKey, title, purchaseLink, category }",
+      "6. PATCH /api/v1/user/series/:id { status: 'submitted' } → backend builds analyzeJobRequest and POSTs it to the AI model",
+      "7. AI model POSTs callbackUrl → backend writes episode.productCues + uploads product-cues.json to S3"
+    ]
+  },
+
+  "step1_createSeriesRequest": {
+    "method": "POST",
+    "url": "/api/v1/user/series",
+    "headers": { "Authorization": "Bearer <userJwt>", "Content-Type": "application/json" },
+    "body": {
+      "name": "Demo Shoppable Series 31 Jul",
+      "type": "micro_drama",
+      "episodeCount": 1,
+      "productCount": 4
+    }
+  },
+
+  "step2_presignRequests": [
+    {
+      "method": "POST",
+      "url": "/api/v1/user/series/{seriesId}/upload/presign",
+      "body": {
+        "assetType": "episode",
+        "fileName": "WhatsApp Video 2026-07-31 at 12.38.21 AM.mp4",
+        "contentType": "video/mp4"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/user/series/{seriesId}/upload/presign",
+      "body": { "assetType": "product", "fileName": "shirt.png", "contentType": "image/png" }
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/user/series/{seriesId}/upload/presign",
+      "body": { "assetType": "product", "fileName": "earrings.png", "contentType": "image/png" }
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/user/series/{seriesId}/upload/presign",
+      "body": { "assetType": "product", "fileName": "headphones.png", "contentType": "image/png" }
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/user/series/{seriesId}/upload/presign",
+      "body": { "assetType": "product", "fileName": "specs.png", "contentType": "image/png" }
+    }
+  ],
+
+  "step4_registerEpisodeRequest": {
+    "method": "POST",
+    "url": "/api/v1/user/series/{seriesId}/episodes",
+    "body": {
+      "title": "Demo Episode 1",
+      "order": 1,
+      "videoKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/episodes/1785000000001-11111111-1111-4111-8111-111111111111-WhatsApp_Video_2026-07-31.mp4",
+      "productCues": []
+    }
+  },
+
+  "step5_registerProductRequests": [
+    {
+      "method": "POST",
+      "url": "/api/v1/user/series/{seriesId}/products",
+      "body": {
+        "title": "Olive Overshirt",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "clothing",
+        "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000002-22222222-2222-4222-8222-222222222222-shirt.png"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/user/series/{seriesId}/products",
+      "body": {
+        "title": "Gold Pearl Earrings",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "non-clothing",
+        "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000003-33333333-3333-4333-8333-333333333333-earrings.png"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/user/series/{seriesId}/products",
+      "body": {
+        "title": "Sony WH-CH520 Headphones",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "non-clothing",
+        "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000004-44444444-4444-4444-8444-444444444444-headphones.png"
+      }
+    },
+    {
+      "method": "POST",
+      "url": "/api/v1/user/series/{seriesId}/products",
+      "body": {
+        "title": "Clear Frame Eyeglasses",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "non-clothing",
+        "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000005-55555555-5555-4555-8555-555555555555-specs.png"
+      }
+    }
+  ],
+
+  "step6_submitRequest": {
+    "method": "PATCH",
+    "url": "/api/v1/user/series/{seriesId}",
+    "body": { "status": "submitted" },
+    "note": "Triggers queueSeriesAiAnalysis → POST {AI_SERVICE_URL}/v1/analyze/jobs with analyzeJobRequest below. Manual retry: POST /api/v1/user/series/{seriesId}/ai/analyze"
+  },
+
+  "analyzeJobRequest": {
+    "_transport": {
+      "method": "POST",
+      "url": "https://getting-westminster-fairfield-retailers.trycloudflare.com/v1/analyze/jobs",
+      "headers": {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": "Bearer <AI_SERVICE_API_KEY> (only sent when AI_SERVICE_API_KEY is set)"
+      }
+    },
+    "jobId": "7f3a1c62-9b40-4a1e-9d55-8c2e4b6a10d3",
+    "seriesId": "6b1100aa2c9f4a0011000001",
+    "callbackUrl": "https://api.unscene.in/api/v1/internal/ai/product-cues/callback",
+    "episodes": [
+      {
+        "episodeId": "6b1100aa2c9f4a0011000010",
+        "title": "Demo Episode 1",
+        "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/episodes/1785000000001-11111111-1111-4111-8111-111111111111-WhatsApp_Video_2026-07-31.mp4",
+        "order": 1,
+        "videoKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/episodes/1785000000001-11111111-1111-4111-8111-111111111111-WhatsApp_Video_2026-07-31.mp4"
+      }
+    ],
+    "products": [
+      {
+        "productId": "6b1100aa2c9f4a0011000021",
+        "title": "Olive Overshirt",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000002-22222222-2222-4222-8222-222222222222-shirt.png",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "clothing",
+        "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000002-22222222-2222-4222-8222-222222222222-shirt.png"
+      },
+      {
+        "productId": "6b1100aa2c9f4a0011000022",
+        "title": "Gold Pearl Earrings",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000003-33333333-3333-4333-8333-333333333333-earrings.png",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "non-clothing",
+        "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000003-33333333-3333-4333-8333-333333333333-earrings.png"
+      },
+      {
+        "productId": "6b1100aa2c9f4a0011000023",
+        "title": "Sony WH-CH520 Headphones",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000004-44444444-4444-4444-8444-444444444444-headphones.png",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "non-clothing",
+        "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000004-44444444-4444-4444-8444-444444444444-headphones.png"
+      },
+      {
+        "productId": "6b1100aa2c9f4a0011000024",
+        "title": "Clear Frame Eyeglasses",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000005-55555555-5555-4555-8555-555555555555-specs.png",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "non-clothing",
+        "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000005-55555555-5555-4555-8555-555555555555-specs.png"
+      }
+    ]
+  },
+
+  "expectedAsyncAck": {
+    "_note": "202 Accepted (or 200 with one of processing/accepted/queued/pending) → backend waits for callback.",
+    "jobId": "7f3a1c62-9b40-4a1e-9d55-8c2e4b6a10d3",
+    "seriesId": "6b1100aa2c9f4a0011000001",
+    "status": "processing"
+  },
+
+  "callbackDetectionFormat": {
+    "_note": "Preferred. POST to callbackUrl (header X-AI-Webhook-Secret only when AI_WEBHOOK_SECRET is set). clothing[] maps to products with category clothing; objects[] maps to non-clothing by synonym group. Keep ranges <= 0.5s; longer windows get clamped.",
+    "jobId": "7f3a1c62-9b40-4a1e-9d55-8c2e4b6a10d3",
+    "seriesId": "6b1100aa2c9f4a0011000001",
+    "status": "completed",
+    "episodes": [
+      {
+        "episodeId": "6b1100aa2c9f4a0011000010",
+        "clothing": [
+          {
+            "category": "shirt",
+            "productId": "6b1100aa2c9f4a0011000021",
+            "ranges": [
+              {
+                "start": 2.0,
+                "end": 2.4,
+                "bbox": [118, 205, 486, 902],
+                "cropImageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/crops/demo-ep1-shirt-t2.jpg"
+              },
+              { "start": 14.0, "end": 14.4, "bbox": [130, 220, 470, 890] }
+            ]
+          }
+        ],
+        "objects": [
+          {
+            "category": "earrings",
+            "productId": "6b1100aa2c9f4a0011000022",
+            "ranges": [{ "start": 5.0, "end": 5.4, "bbox": [302, 178, 358, 262] }]
+          },
+          {
+            "category": "headphones",
+            "productId": "6b1100aa2c9f4a0011000023",
+            "ranges": [
+              {
+                "start": 8.0,
+                "end": 8.4,
+                "bbox": [198, 96, 522, 418],
+                "cropImageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/crops/demo-ep1-headphones-t8.jpg"
+              }
+            ]
+          },
+          {
+            "category": "glasses",
+            "productId": "6b1100aa2c9f4a0011000024",
+            "ranges": [{ "start": 11.0, "end": 11.4, "bbox": [276, 158, 424, 244] }]
+          }
+        ]
+      }
+    ]
+  },
+
+  "callbackLegacyCueFormat": {
+    "_note": "Alternative. Backend accepts cues[] directly; imageUrl/title/purchaseLink are filled from the catalog product when seriesProductId is given.",
+    "jobId": "7f3a1c62-9b40-4a1e-9d55-8c2e4b6a10d3",
+    "seriesId": "6b1100aa2c9f4a0011000001",
+    "status": "completed",
+    "episodes": [
+      {
+        "episodeId": "6b1100aa2c9f4a0011000010",
+        "cues": [
+          {
+            "timestampSeconds": 2,
+            "endTimestampSeconds": 2.4,
+            "seriesProductId": "6b1100aa2c9f4a0011000021",
+            "purchaseLink": "https://purchase.link/demo",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000002-22222222-2222-4222-8222-222222222222-shirt.png",
+            "title": "Clothing",
+            "displayDurationSeconds": 2,
+            "bbox": [118, 205, 486, 902],
+            "detectionCategory": "shirt",
+            "detectionType": "clothing"
+          },
+          {
+            "timestampSeconds": 5,
+            "endTimestampSeconds": 5.4,
+            "seriesProductId": "6b1100aa2c9f4a0011000022",
+            "purchaseLink": "https://purchase.link/demo",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000003-33333333-3333-4333-8333-333333333333-earrings.png",
+            "title": "Gold Pearl Earrings",
+            "displayDurationSeconds": 2,
+            "bbox": [302, 178, 358, 262],
+            "detectionCategory": "earrings",
+            "detectionType": "object"
+          },
+          {
+            "timestampSeconds": 8,
+            "endTimestampSeconds": 8.4,
+            "seriesProductId": "6b1100aa2c9f4a0011000023",
+            "purchaseLink": "https://purchase.link/demo",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000004-44444444-4444-4444-8444-444444444444-headphones.png",
+            "title": "Sony WH-CH520 Headphones",
+            "displayDurationSeconds": 2,
+            "bbox": [198, 96, 522, 418],
+            "detectionCategory": "headphones",
+            "detectionType": "object"
+          },
+          {
+            "timestampSeconds": 11,
+            "endTimestampSeconds": 11.4,
+            "seriesProductId": "6b1100aa2c9f4a0011000024",
+            "purchaseLink": "https://purchase.link/demo",
+            "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000005-55555555-5555-4555-8555-555555555555-specs.png",
+            "title": "Clear Frame Eyeglasses",
+            "displayDurationSeconds": 2,
+            "bbox": [276, 158, 424, 244],
+            "detectionCategory": "glasses",
+            "detectionType": "object"
+          }
+        ]
+      }
+    ]
+  },
+
+  "callbackFailureExample": {
+    "jobId": "7f3a1c62-9b40-4a1e-9d55-8c2e4b6a10d3",
+    "seriesId": "6b1100aa2c9f4a0011000001",
+    "status": "failed",
+    "error": "Could not download video for episode 6b1100aa2c9f4a0011000010"
+  },
+
+  "storedResult": {
+    "_note": "What the backend persists after a successful callback (GET /api/v1/user/series/{seriesId}).",
+    "callbackApiResponse": {
+      "success": true,
+      "data": {
+        "seriesId": "6b1100aa2c9f4a0011000001",
+        "aiProcessingStatus": "completed",
+        "episodesUpdated": 1,
+        "totalCues": 5
+      }
+    },
+    "seriesFields": {
+      "aiProcessingStatus": "completed",
+      "aiJobId": "7f3a1c62-9b40-4a1e-9d55-8c2e4b6a10d3",
+      "aiError": "",
+      "aiRequestedAt": "2026-07-31T07:10:00.000Z",
+      "aiCompletedAt": "2026-07-31T07:12:31.000Z"
+    },
+    "episodeFields": {
+      "_id": "6b1100aa2c9f4a0011000010",
+      "timestampJsonKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/episodes/6b1100aa2c9f4a0011000010/ai/product-cues.json",
+      "timestampJsonUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/episodes/6b1100aa2c9f4a0011000010/ai/product-cues.json",
+      "productCues": [
+        {
+          "timestampSeconds": 2,
+          "endTimestampSeconds": 2.4,
+          "purchaseLink": "https://purchase.link/demo",
+          "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000002-22222222-2222-4222-8222-222222222222-shirt.png",
+          "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000002-22222222-2222-4222-8222-222222222222-shirt.png",
+          "title": "Clothing",
+          "seriesProductId": "6b1100aa2c9f4a0011000021",
+          "displayDurationSeconds": 2,
+          "bbox": [118, 205, 486, 902],
+          "detectionCategory": "shirt",
+          "detectionType": "clothing"
+        },
+        {
+          "timestampSeconds": 5,
+          "endTimestampSeconds": 5.4,
+          "purchaseLink": "https://purchase.link/demo",
+          "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000003-33333333-3333-4333-8333-333333333333-earrings.png",
+          "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000003-33333333-3333-4333-8333-333333333333-earrings.png",
+          "title": "Gold Pearl Earrings",
+          "seriesProductId": "6b1100aa2c9f4a0011000022",
+          "displayDurationSeconds": 2,
+          "bbox": [302, 178, 358, 262],
+          "detectionCategory": "earrings",
+          "detectionType": "object"
+        },
+        {
+          "timestampSeconds": 8,
+          "endTimestampSeconds": 8.4,
+          "purchaseLink": "https://purchase.link/demo",
+          "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000004-44444444-4444-4444-8444-444444444444-headphones.png",
+          "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000004-44444444-4444-4444-8444-444444444444-headphones.png",
+          "title": "Sony WH-CH520 Headphones",
+          "seriesProductId": "6b1100aa2c9f4a0011000023",
+          "displayDurationSeconds": 2,
+          "bbox": [198, 96, 522, 418],
+          "detectionCategory": "headphones",
+          "detectionType": "object"
+        },
+        {
+          "timestampSeconds": 11,
+          "endTimestampSeconds": 11.4,
+          "purchaseLink": "https://purchase.link/demo",
+          "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000005-55555555-5555-4555-8555-555555555555-specs.png",
+          "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000005-55555555-5555-4555-8555-555555555555-specs.png",
+          "title": "Clear Frame Eyeglasses",
+          "seriesProductId": "6b1100aa2c9f4a0011000024",
+          "displayDurationSeconds": 2,
+          "bbox": [276, 158, 424, 244],
+          "detectionCategory": "glasses",
+          "detectionType": "object"
+        },
+        {
+          "timestampSeconds": 14,
+          "endTimestampSeconds": 14.4,
+          "purchaseLink": "https://purchase.link/demo",
+          "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000002-22222222-2222-4222-8222-222222222222-shirt.png",
+          "imageKey": "users/6a0226f4b660482225067665/series/6b1100aa2c9f4a0011000001/products/1785000000002-22222222-2222-4222-8222-222222222222-shirt.png",
+          "title": "Clothing",
+          "seriesProductId": "6b1100aa2c9f4a0011000021",
+          "displayDurationSeconds": 2,
+          "bbox": [130, 220, 470, 890],
+          "detectionCategory": "shirt",
+          "detectionType": "clothing"
+        }
+      ]
+    }
+  }
+}

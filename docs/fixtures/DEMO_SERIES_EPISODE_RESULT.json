@@ -1,0 +1,3846 @@
+{
+  "generatedAt": "2026-07-30T19:26:21.660Z",
+  "apiBaseUrl": "https://api.unscene.in",
+  "purchaseLink": "https://purchase.link/demo",
+  "media": {
+    "video": "C:/Users/PushkarLS68/Downloads/video.mp4",
+    "products": [
+      {
+        "file": "C:/Users/PushkarLS68/.cursor/projects/c-Users-PushkarLS68-Desktop-unsceneAi/assets/c__Users_PushkarLS68_AppData_Roaming_Cursor_User_workspaceStorage_083dfee280c05f78cb1a20452f00ef5f_images_shirt-b4bbe434-c083-47e0-8a8e-d4613dec9553.png",
+        "category": "clothing"
+      },
+      {
+        "file": "C:/Users/PushkarLS68/.cursor/projects/c-Users-PushkarLS68-Desktop-unsceneAi/assets/c__Users_PushkarLS68_AppData_Roaming_Cursor_User_workspaceStorage_083dfee280c05f78cb1a20452f00ef5f_images_earrings-32946352-f0b8-45bd-8ba2-040690f0c839.png",
+        "category": "non-clothing"
+      },
+      {
+        "file": "C:/Users/PushkarLS68/.cursor/projects/c-Users-PushkarLS68-Desktop-unsceneAi/assets/c__Users_PushkarLS68_AppData_Roaming_Cursor_User_workspaceStorage_083dfee280c05f78cb1a20452f00ef5f_images_headphones-4306e7b7-c4b3-4622-883f-07279cb0cf8a.png",
+        "category": "non-clothing"
+      },
+      {
+        "file": "C:/Users/PushkarLS68/.cursor/projects/c-Users-PushkarLS68-Desktop-unsceneAi/assets/c__Users_PushkarLS68_AppData_Roaming_Cursor_User_workspaceStorage_083dfee280c05f78cb1a20452f00ef5f_images_specs__2_-19d91a33-d086-4573-9823-8728c434c505.png",
+        "category": "non-clothing"
+      }
+    ]
+  },
+  "seriesId": "6a6ba496b0118319e3a1b768",
+  "aiProcessingStatus": "processing",
+  "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+  "aiError": "",
+  "analyzeJobRequestSentToAiModel": {
+    "_note": "Rebuilt locally with the same fields buildAnalyzePayload sends.",
+    "jobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+    "seriesId": "6a6ba496b0118319e3a1b768",
+    "callbackUrl": "https://api.unscene.in/api/v1/internal/ai/product-cues/callback",
+    "episodes": [
+      {
+        "episodeId": "6a6ba4a5b0118319e3a1b769",
+        "title": "Demo Episode 1",
+        "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+        "order": 1,
+        "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4"
+      }
+    ],
+    "products": [
+      {
+        "productId": "6a6ba4a6b0118319e3a1b76d",
+        "title": "Olive Overshirt",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "clothing",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png"
+      },
+      {
+        "productId": "6a6ba4a6b0118319e3a1b774",
+        "title": "Gold Pearl Earrings",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "non-clothing",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png"
+      },
+      {
+        "productId": "6a6ba4a6b0118319e3a1b77e",
+        "title": "Sony WH-CH520 Headphones",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "non-clothing",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png"
+      },
+      {
+        "productId": "6a6ba4a6b0118319e3a1b78b",
+        "title": "Clear Frame Eyeglasses",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+        "purchaseLink": "https://purchase.link/demo",
+        "category": "non-clothing",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png"
+      }
+    ]
+  },
+  "storedEpisodeCues": {
+    "episodeId": "6a6ba4a5b0118319e3a1b769",
+    "cueCount": 0,
+    "productCues": []
+  },
+  "finalSeries": {
+    "_id": "6a6ba496b0118319e3a1b768",
+    "user": "6a1eac4bf6cc21b3b09f4366",
+    "type": "micro_drama",
+    "name": "Demo Shoppable Series 2026-07-30T19:23",
+    "genreName": "",
+    "thumbnailKey": "",
+    "thumbnailUrl": "",
+    "episodeCount": 1,
+    "productCount": 4,
+    "status": "submitted",
+    "moderationNotes": "",
+    "featured": false,
+    "catalogHidden": false,
+    "aiProcessingStatus": "processing",
+    "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+    "aiError": "",
+    "episodes": [
+      {
+        "order": 1,
+        "title": "Demo Episode 1",
+        "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+        "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+        "productCues": [],
+        "adminDisabled": false,
+        "_id": "6a6ba4a5b0118319e3a1b769"
+      }
+    ],
+    "products": [
+      {
+        "title": "Olive Overshirt",
+        "purchaseLink": "https://purchase.link/demo",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+        "category": "clothing",
+        "_id": "6a6ba4a6b0118319e3a1b76d"
+      },
+      {
+        "title": "Gold Pearl Earrings",
+        "purchaseLink": "https://purchase.link/demo",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+        "category": "non-clothing",
+        "_id": "6a6ba4a6b0118319e3a1b774"
+      },
+      {
+        "title": "Sony WH-CH520 Headphones",
+        "purchaseLink": "https://purchase.link/demo",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+        "category": "non-clothing",
+        "_id": "6a6ba4a6b0118319e3a1b77e"
+      },
+      {
+        "title": "Clear Frame Eyeglasses",
+        "purchaseLink": "https://purchase.link/demo",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+        "category": "non-clothing",
+        "_id": "6a6ba4a6b0118319e3a1b78b"
+      }
+    ],
+    "createdAt": "2026-07-30T19:23:02.566Z",
+    "updatedAt": "2026-07-30T19:23:19.218Z",
+    "aiCompletedAt": null,
+    "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+  },
+  "beforeSubmitSnapshot": {
+    "_id": "6a6ba496b0118319e3a1b768",
+    "user": "6a1eac4bf6cc21b3b09f4366",
+    "type": "micro_drama",
+    "name": "Demo Shoppable Series 2026-07-30T19:23",
+    "genreName": "",
+    "thumbnailKey": "",
+    "thumbnailUrl": "",
+    "episodeCount": 1,
+    "productCount": 4,
+    "status": "draft",
+    "moderationNotes": "",
+    "featured": false,
+    "catalogHidden": false,
+    "aiProcessingStatus": "idle",
+    "aiJobId": "",
+    "aiError": "",
+    "episodes": [
+      {
+        "order": 1,
+        "title": "Demo Episode 1",
+        "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+        "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+        "productCues": [],
+        "adminDisabled": false,
+        "_id": "6a6ba4a5b0118319e3a1b769"
+      }
+    ],
+    "products": [
+      {
+        "title": "Olive Overshirt",
+        "purchaseLink": "https://purchase.link/demo",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+        "category": "clothing",
+        "_id": "6a6ba4a6b0118319e3a1b76d"
+      },
+      {
+        "title": "Gold Pearl Earrings",
+        "purchaseLink": "https://purchase.link/demo",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+        "category": "non-clothing",
+        "_id": "6a6ba4a6b0118319e3a1b774"
+      },
+      {
+        "title": "Sony WH-CH520 Headphones",
+        "purchaseLink": "https://purchase.link/demo",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+        "category": "non-clothing",
+        "_id": "6a6ba4a6b0118319e3a1b77e"
+      },
+      {
+        "title": "Clear Frame Eyeglasses",
+        "purchaseLink": "https://purchase.link/demo",
+        "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+        "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+        "category": "non-clothing",
+        "_id": "6a6ba4a6b0118319e3a1b78b"
+      }
+    ],
+    "createdAt": "2026-07-30T19:23:02.566Z",
+    "updatedAt": "2026-07-30T19:23:18.992Z"
+  },
+  "transcript": [
+    {
+      "at": "2026-07-30T19:23:02.065Z",
+      "step": "health",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/health",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Backend is running"
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:02.264Z",
+      "step": "auth.send-otp",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/auth/user/send-otp",
+        "body": {
+          "phone": "9999999999"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "OTP sent successfully.",
+        "data": null
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:02.327Z",
+      "step": "auth.verify-otp",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/auth/user/verify-otp",
+        "body": {
+          "phone": "9999999999",
+          "otp": "123456"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "User authenticated successfully",
+        "data": {
+          "token": "<redacted>",
+          "refreshToken": "<redacted>",
+          "isNewUser": false,
+          "user": {
+            "_id": "6a1eac4bf6cc21b3b09f4366",
+            "phone": "9999999999",
+            "role": "user",
+            "isActive": true,
+            "tokenVersion": 4,
+            "favoriteSeries": [],
+            "createdAt": "2026-06-02T10:11:23.301Z",
+            "updatedAt": "2026-07-05T15:09:12.768Z",
+            "__v": 0,
+            "bio": "New Bio",
+            "dateOfBirth": "15/01/1995",
+            "email": "test@example.com",
+            "name": "Test User",
+            "username": "testuser123"
+          }
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:02.410Z",
+      "step": "series.create",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/user/series",
+        "body": {
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "type": "micro_drama",
+          "episodeCount": 1,
+          "productCount": 4
+        }
+      },
+      "status": 201,
+      "response": {
+        "success": true,
+        "message": "Series created",
+        "data": {
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "draft",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "idle",
+          "aiJobId": "",
+          "aiError": "",
+          "_id": "6a6ba496b0118319e3a1b768",
+          "episodes": [],
+          "products": [],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:02.566Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:02.524Z",
+      "step": "presign.video.mp4",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768/upload/presign",
+        "body": {
+          "assetType": "episode",
+          "fileName": "video.mp4",
+          "contentType": "video/mp4"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Presigned upload URL created",
+        "data": {
+          "key": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+          "bucket": "unsceneai-prod-assets",
+          "region": "ap-south-1",
+          "uploadUrl": "https://unsceneai-prod-assets.s3.ap-south-1.amazonaws.com/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4?<signed>",
+          "publicUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:17.172Z",
+      "step": "s3.put.video.mp4",
+      "request": {
+        "method": "PUT",
+        "url": "https://unsceneai-prod-assets.s3.ap-south-1.amazonaws.com/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4?<signed>",
+        "bytes": 12833305,
+        "contentType": "video/mp4"
+      },
+      "status": 200,
+      "response": "(empty 200)"
+    },
+    {
+      "at": "2026-07-30T19:23:17.453Z",
+      "step": "episode.register",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768/episodes",
+        "body": {
+          "title": "Demo Episode 1",
+          "order": 1,
+          "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Episode saved",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "draft",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "idle",
+          "aiJobId": "",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:17.583Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:17.817Z",
+      "step": "presign.shirt.png",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768/upload/presign",
+        "body": {
+          "assetType": "product",
+          "fileName": "shirt.png",
+          "contentType": "image/png"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Presigned upload URL created",
+        "data": {
+          "key": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+          "bucket": "unsceneai-prod-assets",
+          "region": "ap-south-1",
+          "uploadUrl": "https://unsceneai-prod-assets.s3.ap-south-1.amazonaws.com/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png?<signed>",
+          "publicUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:17.946Z",
+      "step": "s3.put.shirt.png",
+      "request": {
+        "method": "PUT",
+        "url": "https://unsceneai-prod-assets.s3.ap-south-1.amazonaws.com/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png?<signed>",
+        "bytes": 10554,
+        "contentType": "image/png"
+      },
+      "status": 200,
+      "response": "(empty 200)"
+    },
+    {
+      "at": "2026-07-30T19:23:18.146Z",
+      "step": "product.register.shirt.png",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768/products",
+        "body": {
+          "title": "Olive Overshirt",
+          "purchaseLink": "https://purchase.link/demo",
+          "category": "clothing",
+          "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Product saved",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "draft",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "idle",
+          "aiJobId": "",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:18.309Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:18.195Z",
+      "step": "presign.earrings.png",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768/upload/presign",
+        "body": {
+          "assetType": "product",
+          "fileName": "earrings.png",
+          "contentType": "image/png"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Presigned upload URL created",
+        "data": {
+          "key": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+          "bucket": "unsceneai-prod-assets",
+          "region": "ap-south-1",
+          "uploadUrl": "https://unsceneai-prod-assets.s3.ap-south-1.amazonaws.com/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png?<signed>",
+          "publicUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:18.278Z",
+      "step": "s3.put.earrings.png",
+      "request": {
+        "method": "PUT",
+        "url": "https://unsceneai-prod-assets.s3.ap-south-1.amazonaws.com/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png?<signed>",
+        "bytes": 4861,
+        "contentType": "image/png"
+      },
+      "status": 200,
+      "response": "(empty 200)"
+    },
+    {
+      "at": "2026-07-30T19:23:18.347Z",
+      "step": "product.register.earrings.png",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768/products",
+        "body": {
+          "title": "Gold Pearl Earrings",
+          "purchaseLink": "https://purchase.link/demo",
+          "category": "non-clothing",
+          "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Product saved",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "draft",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "idle",
+          "aiJobId": "",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:18.508Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:18.409Z",
+      "step": "presign.headphones.png",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768/upload/presign",
+        "body": {
+          "assetType": "product",
+          "fileName": "headphones.png",
+          "contentType": "image/png"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Presigned upload URL created",
+        "data": {
+          "key": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+          "bucket": "unsceneai-prod-assets",
+          "region": "ap-south-1",
+          "uploadUrl": "https://unsceneai-prod-assets.s3.ap-south-1.amazonaws.com/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png?<signed>",
+          "publicUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:18.496Z",
+      "step": "s3.put.headphones.png",
+      "request": {
+        "method": "PUT",
+        "url": "https://unsceneai-prod-assets.s3.ap-south-1.amazonaws.com/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png?<signed>",
+        "bytes": 28551,
+        "contentType": "image/png"
+      },
+      "status": 200,
+      "response": "(empty 200)"
+    },
+    {
+      "at": "2026-07-30T19:23:18.581Z",
+      "step": "product.register.headphones.png",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768/products",
+        "body": {
+          "title": "Sony WH-CH520 Headphones",
+          "purchaseLink": "https://purchase.link/demo",
+          "category": "non-clothing",
+          "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Product saved",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "draft",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "idle",
+          "aiJobId": "",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:18.712Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:18.645Z",
+      "step": "presign.specs.png",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768/upload/presign",
+        "body": {
+          "assetType": "product",
+          "fileName": "specs.png",
+          "contentType": "image/png"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Presigned upload URL created",
+        "data": {
+          "key": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+          "bucket": "unsceneai-prod-assets",
+          "region": "ap-south-1",
+          "uploadUrl": "https://unsceneai-prod-assets.s3.ap-south-1.amazonaws.com/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png?<signed>",
+          "publicUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:18.774Z",
+      "step": "s3.put.specs.png",
+      "request": {
+        "method": "PUT",
+        "url": "https://unsceneai-prod-assets.s3.ap-south-1.amazonaws.com/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png?<signed>",
+        "bytes": 20838,
+        "contentType": "image/png"
+      },
+      "status": 200,
+      "response": "(empty 200)"
+    },
+    {
+      "at": "2026-07-30T19:23:18.829Z",
+      "step": "product.register.specs.png",
+      "request": {
+        "method": "POST",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768/products",
+        "body": {
+          "title": "Clear Frame Eyeglasses",
+          "purchaseLink": "https://purchase.link/demo",
+          "category": "non-clothing",
+          "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Product saved",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "draft",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "idle",
+          "aiJobId": "",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:18.992Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:18.945Z",
+      "step": "series.get.beforeSubmit",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "draft",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "idle",
+          "aiJobId": "",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:18.992Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:19.069Z",
+      "step": "series.submit",
+      "request": {
+        "method": "PATCH",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": {
+          "status": "submitted"
+        }
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series updated",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "idle",
+          "aiJobId": "",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.209Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:24.373Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:29.783Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:35.021Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:40.190Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:45.444Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:50.667Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:23:55.851Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:01.500Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:06.801Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:11.992Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:17.148Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:22.312Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:27.483Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:32.641Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:37.982Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:43.137Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:48.313Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:53.536Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:24:58.710Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:25:03.893Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:25:09.144Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:25:14.356Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:25:19.586Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:25:24.756Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:25:29.929Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:25:35.085Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:25:40.228Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:25:45.412Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:25:50.593Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:25:55.759Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:26:00.938Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:26:06.092Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:26:11.320Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:26:16.495Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    },
+    {
+      "at": "2026-07-30T19:26:21.660Z",
+      "step": "series.poll",
+      "request": {
+        "method": "GET",
+        "url": "https://api.unscene.in/api/v1/user/series/6a6ba496b0118319e3a1b768",
+        "body": null
+      },
+      "status": 200,
+      "response": {
+        "success": true,
+        "message": "Series detail",
+        "data": {
+          "_id": "6a6ba496b0118319e3a1b768",
+          "user": "6a1eac4bf6cc21b3b09f4366",
+          "type": "micro_drama",
+          "name": "Demo Shoppable Series 2026-07-30T19:23",
+          "genreName": "",
+          "thumbnailKey": "",
+          "thumbnailUrl": "",
+          "episodeCount": 1,
+          "productCount": 4,
+          "status": "submitted",
+          "moderationNotes": "",
+          "featured": false,
+          "catalogHidden": false,
+          "aiProcessingStatus": "processing",
+          "aiJobId": "2e3da45a-06f6-45b6-a962-ef4895862310",
+          "aiError": "",
+          "episodes": [
+            {
+              "order": 1,
+              "title": "Demo Episode 1",
+              "videoKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "videoUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/episodes/1785439382627-4edd48ce-861b-4e26-a751-0eeaeebde187-video.mp4",
+              "productCues": [],
+              "adminDisabled": false,
+              "_id": "6a6ba4a5b0118319e3a1b769"
+            }
+          ],
+          "products": [
+            {
+              "title": "Olive Overshirt",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439397977-7d9d7696-d009-4fad-be55-b83d73769635-shirt.png",
+              "category": "clothing",
+              "_id": "6a6ba4a6b0118319e3a1b76d"
+            },
+            {
+              "title": "Gold Pearl Earrings",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398361-75a42cfd-0984-4189-916e-e5b9b6b716fc-earrings.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b774"
+            },
+            {
+              "title": "Sony WH-CH520 Headphones",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398566-e9e2ed78-c5b6-48b4-b0ec-c28060784257-headphones.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b77e"
+            },
+            {
+              "title": "Clear Frame Eyeglasses",
+              "purchaseLink": "https://purchase.link/demo",
+              "imageKey": "users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "imageUrl": "https://d1gq4x8e2l4u04.cloudfront.net/users/6a1eac4bf6cc21b3b09f4366/series/6a6ba496b0118319e3a1b768/products/1785439398803-fa3205dd-df68-4b99-ab9a-f51f5cc2e742-specs.png",
+              "category": "non-clothing",
+              "_id": "6a6ba4a6b0118319e3a1b78b"
+            }
+          ],
+          "createdAt": "2026-07-30T19:23:02.566Z",
+          "updatedAt": "2026-07-30T19:23:19.218Z",
+          "aiCompletedAt": null,
+          "aiRequestedAt": "2026-07-30T19:23:19.215Z"
+        }
+      }
+    }
+  ]
+}

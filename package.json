@@ -14,6 +14,7 @@
     "seed:demo-thumbnail": "node src/scripts/seedDemoSeriesThumbnail.js",
     "seed:ai-detection": "node src/scripts/seedAiDetectionCues.js",
     "test:ai-flow": "node src/scripts/testAiFlow.js",
+    "demo:series-flow": "node src/scripts/demoSeriesEpisodeFlow.js",
     "test": "echo \"No tests configured\""
   },
   "keywords": [],
