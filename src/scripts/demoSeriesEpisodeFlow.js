@@ -108,7 +108,18 @@ const downloadToTemp = async (url, fileName) => {
 const resolveMedia = async (fileName, envKey, fallbackUrl) => {
   const override = (process.env[envKey] || "").trim();
   if (override) {
-    return isUrl(override) ? downloadToTemp(override, fileName) : override;
+    if (isUrl(override)) {
+      return downloadToTemp(override, fileName);
+    }
+    const overridePath = path.isAbsolute(override)
+      ? override
+      : path.resolve(BACKEND_DIR, override);
+    if (!fs.existsSync(overridePath)) {
+      throw new Error(
+        `Missing media file: ${overridePath}. Upload it first or set ${envKey} to a valid path/URL.`
+      );
+    }
+    return overridePath;
   }
   const local = path.join(MEDIA_DIR, fileName);
   if (fs.existsSync(local)) return local;
@@ -295,8 +306,30 @@ const writeResult = (seriesId, series) => {
     transcript,
   };
 
-  fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
-  fs.writeFileSync(OUT_PATH, JSON.stringify(result, null, 2), "utf8");
+  const candidates = [
+    OUT_PATH,
+    path.join(os.tmpdir(), "DEMO_SERIES_EPISODE_RESULT.json"),
+    path.join(process.cwd(), "DEMO_SERIES_EPISODE_RESULT.json"),
+  ];
+
+  let savedPath = null;
+  let lastErr = null;
+  for (const candidate of candidates) {
+    try {
+      fs.mkdirSync(path.dirname(candidate), { recursive: true });
+      fs.writeFileSync(candidate, JSON.stringify(result, null, 2), "utf8");
+      savedPath = candidate;
+      break;
+    } catch (err) {
+      lastErr = err;
+      console.warn(`[demo-flow] could not write ${candidate}: ${err.message}`);
+    }
+  }
+  if (!savedPath) {
+    throw lastErr || new Error("Could not write result JSON anywhere");
+  }
+
+  result.savedTo = savedPath;
   return result;
 };
 
@@ -352,19 +385,26 @@ const run = async () => {
   console.log(`aiProcessingStatus: ${result.aiProcessingStatus}`);
   console.log(`aiJobId:            ${result.aiJobId}`);
   console.log(`cues stored:        ${result.storedEpisodeCues.cueCount}`);
-  console.log(`saved:              ${OUT_PATH}`);
+  console.log(`saved:              ${result.savedTo}`);
 };
 
 run().catch((err) => {
   console.error("\n[demo-flow] FAILED:", err?.message || err);
   try {
-    fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
-    fs.writeFileSync(
-      OUT_PATH,
-      JSON.stringify({ failedAt: new Date().toISOString(), error: String(err?.message || err), transcript }, null, 2),
-      "utf8"
-    );
-    console.error(`[demo-flow] partial transcript saved: ${OUT_PATH}`);
+    const fallback = path.join(os.tmpdir(), "DEMO_SERIES_EPISODE_RESULT.json");
+    const candidates = [OUT_PATH, fallback, path.join(process.cwd(), "DEMO_SERIES_EPISODE_RESULT.json")];
+    for (const candidate of candidates) {
+      try {
+        fs.mkdirSync(path.dirname(candidate), { recursive: true });
+        fs.writeFileSync(
+          candidate,
+          JSON.stringify({ failedAt: new Date().toISOString(), error: String(err?.message || err), transcript }, null, 2),
+          "utf8"
+        );
+        console.error(`[demo-flow] partial transcript saved: ${candidate}`);
+        break;
+      } catch {}
+    }
   } catch {}
   process.exit(1);
 });
