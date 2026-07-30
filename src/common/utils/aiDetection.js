@@ -282,6 +282,13 @@ const pushRangeCue = (out, range, category, detectionType, products, usedIds, it
   const product = pickProductForDetection(products, category, preferredId, usedIds);
   const cropUrl = resolveCropImageUrl(range);
 
+  // A detection outside this series' catalog is not shoppable. For example,
+  // ignore shirt detections during a non-clothing-only analysis instead of
+  // creating an invalid cue without a product image or purchase link.
+  if (!product && !cropUrl) {
+    return;
+  }
+
   const entry = {
     timestampSeconds: start,
     endTimestampSeconds: end,

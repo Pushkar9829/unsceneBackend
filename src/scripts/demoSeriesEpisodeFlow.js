@@ -49,12 +49,26 @@ const OUT_PATH =
 const FALLBACK_VIDEO_URL =
   "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/episodes/1778443081381-6e8cbb62-f03c-4cea-88c6-8ef8cb9f8c5c-vtoVideo.mp4";
 
-const PRODUCTS = [
+const ALL_PRODUCTS = [
   { fileName: "shirt.png", envKey: "DEMO_PRODUCT_SHIRT", title: "Olive Overshirt", category: "clothing" },
   { fileName: "earrings.png", envKey: "DEMO_PRODUCT_EARRINGS", title: "Gold Pearl Earrings", category: "non-clothing" },
   { fileName: "headphones.png", envKey: "DEMO_PRODUCT_HEADPHONES", title: "Sony WH-CH520 Headphones", category: "non-clothing" },
   { fileName: "specs.png", envKey: "DEMO_PRODUCT_SPECS", title: "Clear Frame Eyeglasses", category: "non-clothing" },
 ];
+const PRODUCT_MODE = (process.env.DEMO_PRODUCT_MODE || "all").trim().toLowerCase();
+const PRODUCTS =
+  PRODUCT_MODE === "non-clothing"
+    ? ALL_PRODUCTS.filter((p) => p.category === "non-clothing")
+    : PRODUCT_MODE === "clothing"
+      ? ALL_PRODUCTS.filter((p) => p.category === "clothing")
+      : ALL_PRODUCTS;
+const SERIES_NAME_PREFIX =
+  process.env.DEMO_SERIES_NAME_PREFIX ||
+  (PRODUCT_MODE === "non-clothing"
+    ? "Demo Non-Clothing Series"
+    : PRODUCT_MODE === "clothing"
+      ? "Demo Clothing Series"
+      : "Demo Shoppable Series");
 
 const transcript = [];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -255,7 +269,7 @@ const createAndUpload = async (token) => {
   const created = await api("series.create", "POST", "/api/v1/user/series", {
     token,
     json: {
-      name: `Demo Shoppable Series ${new Date().toISOString().slice(0, 16)}`,
+      name: `${SERIES_NAME_PREFIX} ${new Date().toISOString().slice(0, 16)}`,
       type: "micro_drama",
       episodeCount: 1,
       productCount: PRODUCTS.length,
@@ -338,6 +352,8 @@ const run = async () => {
     API_BASE_URL,
     MEDIA_DIR,
     PURCHASE_LINK,
+    PRODUCT_MODE,
+    PRODUCT_COUNT: PRODUCTS.length,
     SERIES_ID: SERIES_ID || "(new series)",
     SKIP_AI_TRIGGER,
     SIMULATE_CALLBACK,

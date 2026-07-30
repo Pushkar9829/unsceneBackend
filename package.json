@@ -15,6 +15,7 @@
     "seed:ai-detection": "node src/scripts/seedAiDetectionCues.js",
     "test:ai-flow": "node src/scripts/testAiFlow.js",
     "demo:series-flow": "node src/scripts/demoSeriesEpisodeFlow.js",
+    "demo:non-clothing": "node src/scripts/demoNonClothingFlow.js",
     "upload:ai-log": "node src/scripts/uploadAiOutLog.js",
     "test": "echo \"No tests configured\""
   },
