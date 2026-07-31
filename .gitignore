@@ -1,6 +1,9 @@
 .env
 src/.env
-# Keep other large clips out of git, but allow the demo episode video.
+# Keep other large clips out of git, but allow the tracked demo episode videos.
 demo-media/*.mp4
 demo-media/*.mov
 !demo-media/video.mp4
+demo-media-2/*.mp4
+demo-media-2/*.mov
+!demo-media-2/demoVideo2.mp4

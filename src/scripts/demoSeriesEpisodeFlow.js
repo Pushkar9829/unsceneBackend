@@ -16,9 +16,11 @@
  *   API_BASE_URL       API host (default https://api.unscene.in)
  *   ACCESS_TOKEN       Skip OTP login and use this JWT
  *   TEST_PHONE/TEST_OTP Demo login (default 9999999999 / 123456)
- *   DEMO_MEDIA_DIR     Folder holding video.mp4, shirt.png, earrings.png, headphones.png, specs.png
+ *   DEMO_MEDIA_DIR     Folder holding episode video + product images
  *                      (default <backend>/demo-media)
+ *   DEMO_CATALOG       Product/media set: all (default) | demo2
  *   DEMO_VIDEO         Overrides the episode video — local path or https URL
+ *   DEMO_VIDEO_FILE    Filename inside DEMO_MEDIA_DIR (default video.mp4, demo2 uses demoVideo2.mp4)
  *   DEMO_PURCHASE_LINK Purchase link written on every product (default https://purchase.link/demo)
  *   SERIES_ID          Resume mode: skip create/upload, only re-trigger AI and poll
  *   SKIP_AI_TRIGGER    true = upload only, never call the AI model
@@ -41,20 +43,40 @@ const SKIP_AI_TRIGGER = process.env.SKIP_AI_TRIGGER === "true";
 const SIMULATE_CALLBACK = process.env.SIMULATE_CALLBACK === "true";
 const POLL_TIMEOUT_MS = Number(process.env.AI_WAIT_TIMEOUT_MS) || 300000;
 const POLL_INTERVAL_MS = Number(process.env.AI_POLL_INTERVAL_MS) || 10000;
-const MEDIA_DIR = process.env.DEMO_MEDIA_DIR || path.join(BACKEND_DIR, "demo-media");
+const DEMO_CATALOG = (process.env.DEMO_CATALOG || "all").trim().toLowerCase();
+const MEDIA_DIR =
+  process.env.DEMO_MEDIA_DIR ||
+  path.join(BACKEND_DIR, DEMO_CATALOG === "demo2" ? "demo-media-2" : "demo-media");
 const OUT_PATH =
-  process.env.OUT_PATH || path.join(BACKEND_DIR, "docs/fixtures/DEMO_SERIES_EPISODE_RESULT.json");
+  process.env.OUT_PATH ||
+  path.join(
+    BACKEND_DIR,
+    DEMO_CATALOG === "demo2"
+      ? "docs/fixtures/DEMO2_SERIES_EPISODE_RESULT.json"
+      : "docs/fixtures/DEMO_SERIES_EPISODE_RESULT.json"
+  );
 
 /** Used when no local video is available so the script still runs on a bare EC2 box. */
 const FALLBACK_VIDEO_URL =
   "https://d1gq4x8e2l4u04.cloudfront.net/users/69f86e79a7cdeb44c6a9e441/series/69fe36c51f3977b48b2e7782/episodes/1778443081381-6e8cbb62-f03c-4cea-88c6-8ef8cb9f8c5c-vtoVideo.mp4";
 
-const ALL_PRODUCTS = [
-  { fileName: "shirt.png", envKey: "DEMO_PRODUCT_SHIRT", title: "Olive Overshirt", category: "clothing" },
-  { fileName: "earrings.png", envKey: "DEMO_PRODUCT_EARRINGS", title: "Gold Pearl Earrings", category: "non-clothing" },
-  { fileName: "headphones.png", envKey: "DEMO_PRODUCT_HEADPHONES", title: "Sony WH-CH520 Headphones", category: "non-clothing" },
-  { fileName: "specs.png", envKey: "DEMO_PRODUCT_SPECS", title: "Clear Frame Eyeglasses", category: "non-clothing" },
-];
+const CATALOGS = {
+  all: [
+    { fileName: "shirt.png", envKey: "DEMO_PRODUCT_SHIRT", title: "Olive Overshirt", category: "clothing" },
+    { fileName: "earrings.png", envKey: "DEMO_PRODUCT_EARRINGS", title: "Gold Pearl Earrings", category: "non-clothing" },
+    { fileName: "headphones.png", envKey: "DEMO_PRODUCT_HEADPHONES", title: "Sony WH-CH520 Headphones", category: "non-clothing" },
+    { fileName: "specs.png", envKey: "DEMO_PRODUCT_SPECS", title: "Clear Frame Eyeglasses", category: "non-clothing" },
+  ],
+  demo2: [
+    { fileName: "top.png", envKey: "DEMO_PRODUCT_TOP", title: "Floral Burgundy Top", category: "clothing" },
+    { fileName: "earrings.png", envKey: "DEMO_PRODUCT_EARRINGS", title: "Oxidized Silver Jhumka Earrings", category: "non-clothing" },
+    { fileName: "purse.png", envKey: "DEMO_PRODUCT_PURSE", title: "Magnolia Canvas Tote Bag", category: "non-clothing" },
+  ],
+};
+
+const ALL_PRODUCTS = CATALOGS[DEMO_CATALOG] || CATALOGS.all;
+const VIDEO_FILE =
+  process.env.DEMO_VIDEO_FILE || (DEMO_CATALOG === "demo2" ? "demoVideo2.mp4" : "video.mp4");
 const PRODUCT_MODE = (process.env.DEMO_PRODUCT_MODE || "all").trim().toLowerCase();
 const PRODUCTS =
   PRODUCT_MODE === "non-clothing"
@@ -66,13 +88,15 @@ const PRODUCTS =
         : ALL_PRODUCTS;
 const SERIES_NAME_PREFIX =
   process.env.DEMO_SERIES_NAME_PREFIX ||
-  (PRODUCT_MODE === "non-clothing"
-    ? "Demo Non-Clothing Series"
-    : PRODUCT_MODE === "clothing"
-      ? "Demo Clothing Series"
-      : PRODUCT_MODE === "no-earrings" || PRODUCT_MODE === "exclude-earrings"
-        ? "Demo No-Earrings Series"
-        : "Demo Shoppable Series");
+  (DEMO_CATALOG === "demo2"
+    ? "Demo2 Shoppable Series"
+    : PRODUCT_MODE === "non-clothing"
+      ? "Demo Non-Clothing Series"
+      : PRODUCT_MODE === "clothing"
+        ? "Demo Clothing Series"
+        : PRODUCT_MODE === "no-earrings" || PRODUCT_MODE === "exclude-earrings"
+          ? "Demo No-Earrings Series"
+          : "Demo Shoppable Series");
 
 const transcript = [];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -264,7 +288,7 @@ const buildSampleCallback = (series) => {
 };
 
 const createAndUpload = async (token) => {
-  const videoPath = await resolveMedia("video.mp4", "DEMO_VIDEO", FALLBACK_VIDEO_URL);
+  const videoPath = await resolveMedia(VIDEO_FILE, "DEMO_VIDEO", FALLBACK_VIDEO_URL);
   const productPaths = [];
   for (const p of PRODUCTS) {
     productPaths.push({ ...p, filePath: await resolveMedia(p.fileName, p.envKey, null) });
@@ -282,7 +306,7 @@ const createAndUpload = async (token) => {
   const seriesId = created?.data?._id;
   if (!seriesId) throw new Error("series create returned no _id");
 
-  const videoKey = await uploadAsset(token, seriesId, "episode", videoPath, "video.mp4");
+  const videoKey = await uploadAsset(token, seriesId, "episode", videoPath, VIDEO_FILE);
   await api("episode.register", "POST", `/api/v1/user/series/${seriesId}/episodes`, {
     token,
     json: { title: "Demo Episode 1", order: 1, videoKey },
@@ -354,7 +378,9 @@ const writeResult = (seriesId, series) => {
 const run = async () => {
   console.log("[demo-flow] config", {
     API_BASE_URL,
+    DEMO_CATALOG,
     MEDIA_DIR,
+    VIDEO_FILE,
     PURCHASE_LINK,
     PRODUCT_MODE,
     PRODUCT_COUNT: PRODUCTS.length,

@@ -132,7 +132,7 @@
   "analyzeJobRequest": {
     "_transport": {
       "method": "POST",
-      "url": "https://getting-westminster-fairfield-retailers.trycloudflare.com/v1/analyze/jobs",
+      "url": "https://devoted-admission-film-myers.trycloudflare.com/v1/analyze/jobs",
       "headers": {
         "Content-Type": "application/json",
         "Accept": "application/json",

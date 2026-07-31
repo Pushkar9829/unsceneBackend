@@ -17,6 +17,7 @@
     "demo:series-flow": "node src/scripts/demoSeriesEpisodeFlow.js",
     "demo:non-clothing": "node src/scripts/demoNonClothingFlow.js",
     "demo:no-earrings": "node src/scripts/demoNoEarringsFlow.js",
+    "demo:demo2": "node src/scripts/demo2SeriesEpisodeFlow.js",
     "upload:ai-log": "node src/scripts/uploadAiOutLog.js",
 
     "test": "echo \"No tests configured\""
