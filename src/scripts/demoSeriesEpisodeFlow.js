@@ -85,18 +85,22 @@ const PRODUCTS =
       ? ALL_PRODUCTS.filter((p) => p.category === "clothing")
       : PRODUCT_MODE === "no-earrings" || PRODUCT_MODE === "exclude-earrings"
         ? ALL_PRODUCTS.filter((p) => p.fileName !== "earrings.png")
-        : ALL_PRODUCTS;
+        : PRODUCT_MODE === "handbag" || PRODUCT_MODE === "purse" || PRODUCT_MODE === "bag-only"
+          ? ALL_PRODUCTS.filter((p) => p.fileName === "purse.png")
+          : ALL_PRODUCTS;
 const SERIES_NAME_PREFIX =
   process.env.DEMO_SERIES_NAME_PREFIX ||
-  (DEMO_CATALOG === "demo2"
-    ? "Demo2 Shoppable Series"
-    : PRODUCT_MODE === "non-clothing"
-      ? "Demo Non-Clothing Series"
-      : PRODUCT_MODE === "clothing"
-        ? "Demo Clothing Series"
-        : PRODUCT_MODE === "no-earrings" || PRODUCT_MODE === "exclude-earrings"
-          ? "Demo No-Earrings Series"
-          : "Demo Shoppable Series");
+  (DEMO_CATALOG === "demo2" && (PRODUCT_MODE === "handbag" || PRODUCT_MODE === "purse" || PRODUCT_MODE === "bag-only")
+    ? "Demo2 Handbag Series"
+    : DEMO_CATALOG === "demo2"
+      ? "Demo2 Shoppable Series"
+      : PRODUCT_MODE === "non-clothing"
+        ? "Demo Non-Clothing Series"
+        : PRODUCT_MODE === "clothing"
+          ? "Demo Clothing Series"
+          : PRODUCT_MODE === "no-earrings" || PRODUCT_MODE === "exclude-earrings"
+            ? "Demo No-Earrings Series"
+            : "Demo Shoppable Series");
 
 const transcript = [];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
